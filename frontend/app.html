@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blue Garden — Ficheiros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="logo"><span class="logo-icone">❀</span> Blue Garden</div>
+    <input id="pesquisa" type="search" placeholder="Pesquisar ficheiros…" aria-label="Pesquisar">
+    <div class="utilizador">
+      <span id="nome-utilizador"></span>
+      <button id="sair" class="botao fantasma">Sair</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="lateral">
+      <button class="botao primario largo" id="botao-carregar">＋ Carregar ficheiros</button>
+      <input type="file" id="input-ficheiro" multiple hidden>
+      <ul class="menu">
+        <li><a href="#" data-vista="ficheiros" class="ativo">📁 Os meus ficheiros</a></li>
+        <li><a href="#" data-vista="reciclagem">🗑️ Reciclagem</a></li>
+      </ul>
+      <h3>Categorias</h3>
+      <ul class="menu" id="menu-categorias"></ul>
+    </nav>
+
+    <main class="conteudo" id="zona-drop">
+      <div class="barra">
+        <div id="migalhas" class="migalhas"></div>
+        <button class="botao" id="botao-pasta">Nova pasta</button>
+      </div>
+      <p id="aviso" class="aviso" hidden></p>
+      <table class="tabela">
+        <thead>
+          <tr><th>Nome</th><th>Categoria</th><th>Tamanho</th><th>Data</th><th></th></tr>
+        </thead>
+        <tbody id="lista"></tbody>
+      </table>
+      <p id="vazio" class="vazio" hidden>Ainda não há nada aqui. Arrasta ficheiros para esta zona.</p>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>

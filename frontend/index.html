@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blue Garden — Entrar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-login">
+  <main class="cartao-login">
+    <div class="logo"><span class="logo-icone">❀</span> Blue Garden</div>
+    <p class="subtitulo">Os teus ficheiros, organizados sozinhos.</p>
+
+    <div class="separadores">
+      <button class="sep ativo" data-modo="login">Entrar</button>
+      <button class="sep" data-modo="registo">Criar conta</button>
+    </div>
+
+    <form id="form-auth">
+      <label class="so-registo" hidden>Nome
+        <input name="nome" autocomplete="name">
+      </label>
+      <label>Email
+        <input name="email" type="email" required autocomplete="email">
+      </label>
+      <label>Password
+        <input name="password" type="password" required minlength="8" autocomplete="current-password">
+      </label>
+      <p id="erro" class="erro" role="alert"></p>
+      <button type="submit" class="botao primario" id="botao-submeter">Entrar</button>
+    </form>
+  </main>
+
+  <script>
+    if (localStorage.getItem("bg_token")) location.href = "app.html";
+
+    let modo = "login";
+    const form = document.getElementById("form-auth");
+    const erro = document.getElementById("erro");
+
+    document.querySelectorAll(".sep").forEach((b) => b.addEventListener("click", () => {
+      modo = b.dataset.modo;
+      document.querySelectorAll(".sep").forEach((x) => x.classList.toggle("ativo", x === b));
+      document.querySelector(".so-registo").hidden = modo !== "registo";
+      form.nome.required = modo === "registo";
+      document.getElementById("botao-submeter").textContent = modo === "registo" ? "Criar conta" : "Entrar";
+      erro.textContent = "";
+    }));
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      erro.textContent = "";
+      const corpo = { email: form.email.value, password: form.password.value };
+      if (modo === "registo") corpo.nome = form.nome.value;
+      try {
+        const r = await fetch(`/api/auth/${modo === "registo" ? "registar" : "login"}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(corpo),
+        });
+        const dados = await r.json();
+        if (!r.ok) {
+          erro.textContent = typeof dados.detail === "string" ? dados.detail : "Verifica os dados (password com pelo menos 8 caracteres).";
+          return;
+        }
+        localStorage.setItem("bg_token", dados.token);
+        localStorage.setItem("bg_nome", dados.nome);
+        location.href = "app.html";
+      } catch {
+        erro.textContent = "Servidor indisponível. Tenta novamente.";
+      }
+    });
+  </script>
+</body>
+</html>
