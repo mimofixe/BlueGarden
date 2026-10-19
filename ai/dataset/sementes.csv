@@ -1,0 +1,54 @@
+categoria;nome;texto
+Académico;apontamentos_sistemas_distribuidos.pdf;Sistemas Distribuídos aula 3 replicação consistência tolerância a faltas modelo de faltas exercícios professor capítulo
+Académico;enunciado_projeto_IA.pdf;Inteligência Artificial enunciado do projeto entrega avaliação grupo de trabalho algoritmos de procura A* BFS DFS prazo de submissão
+Académico;Trabalho final v3 (2).docx;Introdução metodologia resultados conclusão referências bibliográficas universidade licenciatura engenharia informática trabalho de grupo
+Académico;resumo_algebra.pdf;Álgebra linear matrizes determinantes valores próprios vetores próprios teorema demonstração exercício resolvido exame
+Académico;slides_aula5_redes.pdf;Redes de computadores aula 5 modelo OSI camada de transporte TCP UDP sumário docente unidade curricular
+Académico;exam_preparation_notes.pdf;Lecture notes chapter 4 exam preparation theorem proof exercise solution course syllabus assignment due
+Académico;relatorio_PBL_grupo3.docx;Relatório projeto PBL grupo 3 objetivos arquitetura análise de requisitos casos de uso diagrama de classes semestre
+Académico;ficha_exercicios_estatistica.pdf;Ficha de exercícios estatística distribuição normal média desvio padrão intervalo de confiança teste de hipóteses alunos
+Faturas e finanças;fatura_edp_setembro.pdf;Fatura FT 2026/12345 NIF 500000000 IVA 23% total a pagar 45,32 EUR data de vencimento referência multibanco ATCUD
+Faturas e finanças;recibo_continente.pdf;Recibo talão de compra contribuinte IVA incluído total 23,90 EUR pagamento cartão de débito obrigado pela sua visita
+Faturas e finanças;invoice_amazon.pdf;Invoice number order total VAT 23% subtotal shipping amount due payment method billing address
+Faturas e finanças;extrato_bancario_outubro.pdf;Extrato bancário conta à ordem saldo disponível movimentos débito crédito transferência IBAN data valor
+Faturas e finanças;Fatura-Recibo Vodafone.pdf;Fatura-recibo telecomunicações NIF cliente IVA taxa normal total com IVA período de faturação mensalidade
+Faturas e finanças;nota_de_credito.pdf;Nota de crédito NC referente à fatura FT IVA valor a devolver contribuinte data de emissão
+Faturas e finanças;recibo_renda.pdf;Recibo de renda eletrónico senhorio arrendatário valor da renda mês de referência NIF Portal das Finanças
+Faturas e finanças;uber_receipt.pdf;Receipt trip total fare tax paid card thanks for riding amount
+Documentos pessoais;CV_Luey_2026.pdf;Curriculum vitae experiência profissional formação académica competências línguas contacto email telefone data de nascimento
+Documentos pessoais;contrato_arrendamento.pdf;Contrato de arrendamento entre senhorio e arrendatário cláusula primeira objeto prazo renda assinaturas partes outorgantes
+Documentos pessoais;certificado_matricula.pdf;Certificado de matrícula declara-se para os devidos efeitos que o aluno se encontra inscrito no ano letivo serviços académicos
+Faturas e finanças;declaracao_IRS.pdf;Declaração de rendimentos modelo 3 IRS sujeito passivo agregado familiar Autoridade Tributária anexo
+Documentos pessoais;cartao_cidadao_copia.pdf;Cartão de cidadão República Portuguesa nome apelido data de validade número de documento nacionalidade
+Documentos pessoais;resume_english.docx;Resume work experience education skills references languages professional summary contact
+Documentos pessoais;atestado_residencia.pdf;Atestado de residência junta de freguesia atesta que reside na morada indicada para os devidos efeitos
+Documentos pessoais;carta_motivacao.docx;Carta de motivação candidatura venho por este meio manifestar o meu interesse na vaga com os melhores cumprimentos
+Código;main.py;import os def main(): print hello return if __name__ == __main__ class self
+Código;app.js;const express = require app.get function req res module.exports async await
+Código;Program.java;public class Program public static void main String args System.out.println import java.util
+Código;notas_git.txt;git commit git push origin main git branch merge pull request docker compose up build
+Código;query.sql;SELECT FROM WHERE JOIN GROUP BY ORDER BY INSERT INTO CREATE TABLE PRIMARY KEY
+Código;docker-compose.yml;services image build ports volumes environment depends_on networks restart
+Código;README.md;Instalação npm install pip install requirements uso executar o comando API endpoint repositório
+Código;script.sh;#!/bin/bash echo for do done if then fi export path chmod
+Fotografias;IMG_2031.jpg;
+Fotografias;DSC_0045.jpg;
+Fotografias;foto_ferias_algarve.jpg;
+Fotografias;PXL_20260812_101500.jpg;
+Fotografias;praia_sintra.jpeg;
+Fotografias;jantar_aniversario.heic;
+Fotografias;photo_2026-07-01.jpg;
+Fotografias;WhatsApp Image 2026-09-03.jpeg;
+Capturas de ecrã;Captura de ecrã 2026-09-12 101530.png;
+Capturas de ecrã;Screenshot_20260901-142233.png;
+Capturas de ecrã;Screen Shot 2026-08-02 at 10.11.12.png;
+Capturas de ecrã;image.png;
+Capturas de ecrã;erro_terminal.png;Traceback most recent call last error File line
+Capturas de ecrã;screenshot_teams.png;Microsoft Teams reunião chat participantes
+Capturas de ecrã;print_ecra_moodle.png;Moodle página inicial disciplinas notificações
+Capturas de ecrã;Snip_2026.png;
+Faturas e finanças;simulacao_credito_habitacao.pdf;Simulação de crédito habitação montante financiado prazo 40 anos taxa Euribor spread TAEG prestação mensal banco
+Faturas e finanças;orcamento_mensal.csv;mês renda supermercado transportes passe ginásio poupança total despesas rendimento salário
+Faturas e finanças;comprovativo_transferencia.pdf;Comprovativo de transferência ordenante beneficiário IBAN PT50 montante data descritivo referência operação
+Faturas e finanças;nota_liquidacao_IRS.pdf;Nota de demonstração de liquidação IRS reembolso valor a receber Autoridade Tributária ano de rendimentos
+Documentos pessoais;declaracao_honra.docx;Declaração sob compromisso de honra eu abaixo assinado declaro para os devidos efeitos assinatura data
