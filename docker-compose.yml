@@ -1,0 +1,151 @@
+# Blue Garden — Repositório de Ficheiros Distribuído com categorização por IA
+# Grupo 3 — Projeto 3 (L-EI, 2026/2027)
+#
+# Arranque:  docker compose up -d --build
+# Estado:    docker compose ps
+#
+# Componentes:
+#   nginx            -> HTTPS + balanceamento de carga para 3 backends (único ponto de falha assumido)
+#   backend1..3      -> FastAPI stateless (JWT, sem sessões em memória)
+#   mongo1..3        -> replica set rs0 (metadados + fila da IA)
+#   minio1..4        -> MinIO distribuído com erasure coding (ficheiros cifrados)
+#   ai-worker        -> categorização automática (scikit-learn + regras)
+
+x-backend: &backend
+  build: ./backend
+  env_file: .env
+  environment: &backend-env
+    MONGO_URI: mongodb://mongo1:27017,mongo2:27017,mongo3:27017/?replicaSet=rs0
+    MINIO_ENDPOINTS: minio1:9000,minio2:9000,minio3:9000,minio4:9000
+  depends_on:
+    mongo-init:
+      condition: service_completed_successfully
+    minio1:
+      condition: service_started
+  restart: unless-stopped
+  networks: [interna]
+
+x-mongo: &mongo
+  image: mongo:7
+  command: ["mongod", "--replSet", "rs0", "--bind_ip_all"]
+  restart: unless-stopped
+  networks: [interna]
+  healthcheck:
+    test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+    interval: 5s
+    timeout: 5s
+    retries: 20
+
+x-minio: &minio
+  # A MinIO deixou de publicar imagens oficiais (Docker Hub removeu minio/minio
+  # em set/2026). Esta é a mesma MinIO compilada do código-fonte pela Chainguard.
+  image: cgr.dev/chainguard/minio:latest
+  entrypoint: ["minio"]
+  user: root   # a imagem corre como UID 65532; root evita erros de permissão nos volumes
+  command: ["server", "http://minio{1...4}/data", "--console-address", ":9001"]
+  env_file: .env
+  restart: unless-stopped
+  networks: [interna]
+
+services:
+  # ---------- Balanceador de carga ----------
+  nginx:
+    image: nginx:1.27-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+      - ./frontend:/usr/share/nginx/html:ro
+    depends_on: [backend1, backend2, backend3]
+    restart: unless-stopped
+    networks: [interna]
+
+  # ---------- Backend (3 instâncias stateless) ----------
+  backend1:
+    <<: *backend
+    environment:
+      <<: *backend-env
+      INSTANCIA: backend1
+  backend2:
+    <<: *backend
+    environment:
+      <<: *backend-env
+      INSTANCIA: backend2
+  backend3:
+    <<: *backend
+    environment:
+      <<: *backend-env
+      INSTANCIA: backend3
+
+  # ---------- Metadados: MongoDB replica set rs0 ----------
+  mongo1:
+    <<: *mongo
+    volumes: [mongo1-dados:/data/db]
+  mongo2:
+    <<: *mongo
+    volumes: [mongo2-dados:/data/db]
+  mongo3:
+    <<: *mongo
+    volumes: [mongo3-dados:/data/db]
+
+  # Inicia o replica set uma vez (idempotente) e termina
+  mongo-init:
+    image: mongo:7
+    depends_on:
+      mongo1: {condition: service_healthy}
+      mongo2: {condition: service_healthy}
+      mongo3: {condition: service_healthy}
+    volumes:
+      - ./mongo/init-replica.js:/init-replica.js:ro
+    command: ["mongosh", "--host", "mongo1:27017", "--quiet", "/init-replica.js"]
+    restart: "no"
+    networks: [interna]
+
+  # ---------- Ficheiros: MinIO distribuído (4 nós, erasure coding) ----------
+  minio1:
+    <<: *minio
+    hostname: minio1
+    volumes: [minio1-dados:/data]
+    ports: ["9001:9001"]   # consola web do MinIO (só para a demo)
+  minio2:
+    <<: *minio
+    hostname: minio2
+    volumes: [minio2-dados:/data]
+  minio3:
+    <<: *minio
+    hostname: minio3
+    volumes: [minio3-dados:/data]
+  minio4:
+    <<: *minio
+    hostname: minio4
+    volumes: [minio4-dados:/data]
+
+  # ---------- IA: worker de categorização ----------
+  ai-worker:
+    build: ./ai
+    env_file: .env
+    environment:
+      MONGO_URI: mongodb://mongo1:27017,mongo2:27017,mongo3:27017/?replicaSet=rs0
+      MINIO_ENDPOINTS: minio1:9000,minio2:9000,minio3:9000,minio4:9000
+    volumes:
+      - ai-modelo:/app/modelo
+    depends_on:
+      mongo-init:
+        condition: service_completed_successfully
+    restart: unless-stopped
+    networks: [interna]
+
+networks:
+  interna:
+
+volumes:
+  mongo1-dados:
+  mongo2-dados:
+  mongo3-dados:
+  minio1-dados:
+  minio2-dados:
+  minio3-dados:
+  minio4-dados:
+  ai-modelo:
