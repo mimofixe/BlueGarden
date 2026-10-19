@@ -1,0 +1,7 @@
+.env
+nginx/certs/
+__pycache__/
+*.pyc
+.venv/
+ai/modelo/
+.DS_Store
