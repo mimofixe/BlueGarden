@@ -52,3 +52,270 @@ Faturas e finanças;orcamento_mensal.csv;mês renda supermercado transportes pas
 Faturas e finanças;comprovativo_transferencia.pdf;Comprovativo de transferência ordenante beneficiário IBAN PT50 montante data descritivo referência operação
 Faturas e finanças;nota_liquidacao_IRS.pdf;Nota de demonstração de liquidação IRS reembolso valor a receber Autoridade Tributária ano de rendimentos
 Documentos pessoais;declaracao_honra.docx;Declaração sob compromisso de honra eu abaixo assinado declaro para os devidos efeitos assinatura data
+Académico;relatorio_Segurança_Informática.docx;Relatório do trabalho de Segurança Informática. Introdução, objetivos, metodologia, resultados, conclusão e referências bibliográficas. criptografia simétrica assimétrica hash assinatura digital certificados TLS firewall ataques.
+Académico;enunciado_trabalho_Segurança_Informática.pdf;Enunciado do trabalho prático de Segurança Informática. Grupos de 3 alunos. Tema: criptografia simétrica assimétrica hash assinatura digital certificados TLS firewall ataques. Prazo de entrega e critérios de avaliação.
+Académico;Gestão_de_Projetos_slides_semana10.pdf;Slides da semana 10 - Gestão de Projetos. Universidade, licenciatura em Engenharia Informática. Tópicos: planeamento cronograma diagrama de Gantt riscos recursos stakeholders.
+Académico;Documento8.docx;Trabalho de grupo de Economia. oferta procura elasticidade mercado custos de produção microeconomia. Bibliografia e anexos. Aluno número.
+Académico;Documento2.docx;Trabalho de grupo de Sistemas Distribuídos. replicação consistência eventual relógios lógicos Lamport exclusão mútua eleição de líder RPC. Bibliografia e anexos. Aluno número.
+Académico;resumo_Álgebra_Linear.docx;Resumo de Álgebra Linear para o exame. matrizes determinantes sistemas de equações espaços vetoriais valores próprios. Definições, exemplos e exercícios resolvidos.
+Académico;relatorio_Economia.docx;Relatório do trabalho de Economia. Introdução, objetivos, metodologia, resultados, conclusão e referências bibliográficas. oferta procura elasticidade mercado custos de produção microeconomia.
+Académico;relatorio_Probabilidades_e_Estatística.docx;Relatório do trabalho de Probabilidades e Estatística. Introdução, objetivos, metodologia, resultados, conclusão e referências bibliográficas. variáveis aleatórias distribuição normal média variância intervalos de confiança testes de hipóteses.
+Académico;resumo_Física.docx;Resumo de Física para o exame. cinemática dinâmica leis de Newton energia trabalho campo elétrico. Definições, exemplos e exercícios resolvidos.
+Académico;teste_Engenharia_de_Software_resolucao.pdf;Resolução do teste de Engenharia de Software. Pergunta 1 requisitos casos de uso diagrama de classes Scrum sprint backlog testes unitários padrões de desenho. Critérios de correção e nota final.
+Académico;notas_Álgebra_Linear.txt;notas da aula de Álgebra Linear: matrizes determinantes sistemas de equações espaços vetoriais valores próprios. perguntar ao professor na próxima aula. estudar para o teste.
+Académico;apontamentos_Álgebra_Linear_aula12.pdf;Apontamentos da aula 12 de Álgebra Linear. Matéria: matrizes determinantes sistemas de equações espaços vetoriais valores próprios. Ver slides do professor e capítulo 6 do livro.
+Académico;notas_Sistemas_Operativos.txt;notas da aula de Sistemas Operativos: processos threads escalonamento memória virtual paginação semáforos deadlock. perguntar ao professor na próxima aula. estudar para o teste.
+Académico;Documento9.docx;Trabalho de grupo de Computação Gráfica. transformações geométricas rasterização shaders iluminação modelo Phong. Bibliografia e anexos. Aluno número.
+Académico;Segurança_Informática_slides_semana9.pdf;Slides da semana 9 - Segurança Informática. Universidade, licenciatura em Engenharia Informática. Tópicos: criptografia simétrica assimétrica hash assinatura digital certificados TLS firewall ataques.
+Académico;Economia_slides_semana9.pdf;Slides da semana 9 - Economia. Universidade, licenciatura em Engenharia Informática. Tópicos: oferta procura elasticidade mercado custos de produção microeconomia.
+Académico;Documento8.docx;Trabalho de grupo de Compiladores. análise léxica gramáticas análise sintática árvore sintática geração de código. Bibliografia e anexos. Aluno número.
+Académico;apontamentos_Física_aula10.pdf;Apontamentos da aula 10 de Física. Matéria: cinemática dinâmica leis de Newton energia trabalho campo elétrico. Ver slides do professor e capítulo 4 do livro.
+Académico;apontamentos_Bases_de_Dados_aula12.pdf;Apontamentos da aula 12 de Bases de Dados. Matéria: modelo relacional normalização 3FN chave primária chave estrangeira SQL join transações índices. Ver slides do professor e capítulo 9 do livro.
+Académico;Documento7.docx;Trabalho de grupo de Segurança Informática. criptografia simétrica assimétrica hash assinatura digital certificados TLS firewall ataques. Bibliografia e anexos. Aluno número.
+Académico;notas_Bases_de_Dados.txt;notas da aula de Bases de Dados: modelo relacional normalização 3FN chave primária chave estrangeira SQL join transações índices. perguntar ao professor na próxima aula. estudar para o teste.
+Académico;notas_Interação_Pessoa-Máquina.txt;notas da aula de Interação Pessoa-Máquina: usabilidade heurísticas de Nielsen protótipos testes com utilizadores personas. perguntar ao professor na próxima aula. estudar para o teste.
+Académico;teste_Probabilidades_e_Estatística_resolucao.pdf;Resolução do teste de Probabilidades e Estatística. Pergunta 1 variáveis aleatórias distribuição normal média variância intervalos de confiança testes de hipóteses. Critérios de correção e nota final.
+Académico;teste_Gestão_de_Projetos_resolucao.pdf;Resolução do teste de Gestão de Projetos. Pergunta 1 planeamento cronograma diagrama de Gantt riscos recursos stakeholders. Critérios de correção e nota final.
+Académico;Computação_Gráfica_slides_semana4.pdf;Slides da semana 4 - Computação Gráfica. Universidade, licenciatura em Engenharia Informática. Tópicos: transformações geométricas rasterização shaders iluminação modelo Phong.
+Académico;apontamentos_Probabilidades_e_Estatística_aula1.pdf;Apontamentos da aula 1 de Probabilidades e Estatística. Matéria: variáveis aleatórias distribuição normal média variância intervalos de confiança testes de hipóteses. Ver slides do professor e capítulo 3 do livro.
+Académico;teste_Interação_Pessoa-Máquina_resolucao.pdf;Resolução do teste de Interação Pessoa-Máquina. Pergunta 1 usabilidade heurísticas de Nielsen protótipos testes com utilizadores personas. Critérios de correção e nota final.
+Académico;exame_Programação_Orientada_a_Objetos_2025.pdf;Exame de Programação Orientada a Objetos época normal 2025. Duração 2 horas. Grupo I classes objetos herança polimorfismo encapsulamento interfaces Java exceções. Cotações no fim do enunciado.
+Académico;apontamentos_Gestão_de_Projetos_aula5.pdf;Apontamentos da aula 5 de Gestão de Projetos. Matéria: planeamento cronograma diagrama de Gantt riscos recursos stakeholders. Ver slides do professor e capítulo 6 do livro.
+Académico;resumo_Interação_Pessoa-Máquina.docx;Resumo de Interação Pessoa-Máquina para o exame. usabilidade heurísticas de Nielsen protótipos testes com utilizadores personas. Definições, exemplos e exercícios resolvidos.
+Académico;notas_Probabilidades_e_Estatística.txt;notas da aula de Probabilidades e Estatística: variáveis aleatórias distribuição normal média variância intervalos de confiança testes de hipóteses. perguntar ao professor na próxima aula. estudar para o teste.
+Académico;resumo_Economia.docx;Resumo de Economia para o exame. oferta procura elasticidade mercado custos de produção microeconomia. Definições, exemplos e exercícios resolvidos.
+Académico;ficha_8_Compiladores.pdf;Ficha de exercícios n.º 8 de Compiladores. Resolva os exercícios sobre análise léxica gramáticas análise sintática árvore sintática geração de código. Entrega na próxima aula.
+Académico;apontamentos_Engenharia_de_Software_aula8.pdf;Apontamentos da aula 8 de Engenharia de Software. Matéria: requisitos casos de uso diagrama de classes Scrum sprint backlog testes unitários padrões de desenho. Ver slides do professor e capítulo 10 do livro.
+Académico;resumo_Gestão_de_Projetos.docx;Resumo de Gestão de Projetos para o exame. planeamento cronograma diagrama de Gantt riscos recursos stakeholders. Definições, exemplos e exercícios resolvidos.
+Académico;resumo_Matemática_Discreta.docx;Resumo de Matemática Discreta para o exame. lógica proposicional conjuntos relações grafos indução matemática combinatória. Definições, exemplos e exercícios resolvidos.
+Académico;exame_Gestão_de_Projetos_2025.pdf;Exame de Gestão de Projetos época normal 2025. Duração 2 horas. Grupo I planeamento cronograma diagrama de Gantt riscos recursos stakeholders. Cotações no fim do enunciado.
+Académico;apontamentos_Bases_de_Dados_aula6.pdf;Apontamentos da aula 6 de Bases de Dados. Matéria: modelo relacional normalização 3FN chave primária chave estrangeira SQL join transações índices. Ver slides do professor e capítulo 10 do livro.
+Académico;ficha_9_Economia.pdf;Ficha de exercícios n.º 9 de Economia. Resolva os exercícios sobre oferta procura elasticidade mercado custos de produção microeconomia. Entrega na próxima aula.
+Académico;Documento3.docx;Trabalho de grupo de Economia. oferta procura elasticidade mercado custos de produção microeconomia. Bibliografia e anexos. Aluno número.
+Académico;exame_Física_2025.pdf;Exame de Física época normal 2025. Duração 2 horas. Grupo I cinemática dinâmica leis de Newton energia trabalho campo elétrico. Cotações no fim do enunciado.
+Académico;ficha_10_Redes_de_Computadores.pdf;Ficha de exercícios n.º 10 de Redes de Computadores. Resolva os exercícios sobre modelo OSI TCP/IP endereçamento IP sub-redes routing DNS camada de transporte. Entrega na próxima aula.
+Académico;Física_slides_semana7.pdf;Slides da semana 7 - Física. Universidade, licenciatura em Engenharia Informática. Tópicos: cinemática dinâmica leis de Newton energia trabalho campo elétrico.
+Académico;enunciado_trabalho_Física.pdf;Enunciado do trabalho prático de Física. Grupos de 3 alunos. Tema: cinemática dinâmica leis de Newton energia trabalho campo elétrico. Prazo de entrega e critérios de avaliação.
+Académico;Segurança_Informática_slides_semana2.pdf;Slides da semana 2 - Segurança Informática. Universidade, licenciatura em Engenharia Informática. Tópicos: criptografia simétrica assimétrica hash assinatura digital certificados TLS firewall ataques.
+Académico;relatorio_Sistemas_Operativos.docx;Relatório do trabalho de Sistemas Operativos. Introdução, objetivos, metodologia, resultados, conclusão e referências bibliográficas. processos threads escalonamento memória virtual paginação semáforos deadlock.
+Académico;notas_Física.txt;notas da aula de Física: cinemática dinâmica leis de Newton energia trabalho campo elétrico. perguntar ao professor na próxima aula. estudar para o teste.
+Académico;relatorio_Interação_Pessoa-Máquina.docx;Relatório do trabalho de Interação Pessoa-Máquina. Introdução, objetivos, metodologia, resultados, conclusão e referências bibliográficas. usabilidade heurísticas de Nielsen protótipos testes com utilizadores personas.
+Académico;Documento10.docx;Trabalho de grupo de Interação Pessoa-Máquina. usabilidade heurísticas de Nielsen protótipos testes com utilizadores personas. Bibliografia e anexos. Aluno número.
+Académico;Documento9.docx;Trabalho de grupo de Bases de Dados. modelo relacional normalização 3FN chave primária chave estrangeira SQL join transações índices. Bibliografia e anexos. Aluno número.
+Académico;Documento6.docx;Trabalho de grupo de Compiladores. análise léxica gramáticas análise sintática árvore sintática geração de código. Bibliografia e anexos. Aluno número.
+Académico;enunciado_trabalho_Inteligência_Artificial.pdf;Enunciado do trabalho prático de Inteligência Artificial. Grupos de 3 alunos. Tema: agentes inteligentes procura A* heurística minimax poda alfa-beta aprendizagem supervisionada. Prazo de entrega e critérios de avaliação.
+Académico;teste_Inteligência_Artificial_resolucao.pdf;Resolução do teste de Inteligência Artificial. Pergunta 1 agentes inteligentes procura A* heurística minimax poda alfa-beta aprendizagem supervisionada. Critérios de correção e nota final.
+Académico;notas_Programação_Orientada_a_Objetos.txt;notas da aula de Programação Orientada a Objetos: classes objetos herança polimorfismo encapsulamento interfaces Java exceções. perguntar ao professor na próxima aula. estudar para o teste.
+Académico;teste_Bases_de_Dados_resolucao.pdf;Resolução do teste de Bases de Dados. Pergunta 1 modelo relacional normalização 3FN chave primária chave estrangeira SQL join transações índices. Critérios de correção e nota final.
+Académico;ficha_11_Bases_de_Dados.pdf;Ficha de exercícios n.º 11 de Bases de Dados. Resolva os exercícios sobre modelo relacional normalização 3FN chave primária chave estrangeira SQL join transações índices. Entrega na próxima aula.
+Académico;exame_Computação_Gráfica_2025.pdf;Exame de Computação Gráfica época normal 2025. Duração 2 horas. Grupo I transformações geométricas rasterização shaders iluminação modelo Phong. Cotações no fim do enunciado.
+Académico;resumo_Compiladores.docx;Resumo de Compiladores para o exame. análise léxica gramáticas análise sintática árvore sintática geração de código. Definições, exemplos e exercícios resolvidos.
+Académico;relatorio_Redes_de_Computadores.docx;Relatório do trabalho de Redes de Computadores. Introdução, objetivos, metodologia, resultados, conclusão e referências bibliográficas. modelo OSI TCP/IP endereçamento IP sub-redes routing DNS camada de transporte.
+Académico;ficha_6_Interação_Pessoa-Máquina.pdf;Ficha de exercícios n.º 6 de Interação Pessoa-Máquina. Resolva os exercícios sobre usabilidade heurísticas de Nielsen protótipos testes com utilizadores personas. Entrega na próxima aula.
+Académico;notas_Economia.txt;notas da aula de Economia: oferta procura elasticidade mercado custos de produção microeconomia. perguntar ao professor na próxima aula. estudar para o teste.
+Académico;apontamentos_Matemática_Discreta_aula2.pdf;Apontamentos da aula 2 de Matemática Discreta. Matéria: lógica proposicional conjuntos relações grafos indução matemática combinatória. Ver slides do professor e capítulo 8 do livro.
+Académico;Análise_Matemática_slides_semana9.pdf;Slides da semana 9 - Análise Matemática. Universidade, licenciatura em Engenharia Informática. Tópicos: limites derivadas integrais séries sucessões continuidade teorema.
+Académico;relatorio_Sistemas_Distribuídos.docx;Relatório do trabalho de Sistemas Distribuídos. Introdução, objetivos, metodologia, resultados, conclusão e referências bibliográficas. replicação consistência eventual relógios lógicos Lamport exclusão mútua eleição de líder RPC.
+Académico;Documento9.docx;Trabalho de grupo de Gestão de Projetos. planeamento cronograma diagrama de Gantt riscos recursos stakeholders. Bibliografia e anexos. Aluno número.
+Académico;Lecture_notes_week3.pdf;Lecture notes week 3 distributed systems consistency models exercises homework university course
+Académico;assignment_brief.pdf;Assignment brief students must submit a report and source code deadline marking criteria plagiarism
+Académico;thesis_draft.docx;Thesis draft abstract introduction literature review methodology results discussion references
+Académico;paper_review.pdf;Paper review research article abstract related work experiments evaluation conclusion citations
+Académico;horario_exames.pdf;Calendário de exames época normal e recurso licenciatura unidade curricular sala data hora
+Académico;plano_curricular.pdf;Plano curricular da licenciatura ECTS unidades curriculares semestre obrigatórias opcionais
+Académico;sumarios_aulas.txt;sumário aula 1 apresentação da unidade curricular avaliação bibliografia aula 2 introdução
+Académico;bibliografia.md;Bibliografia recomendada Tanenbaum Coulouris Sommerville Russell Norvig livros e artigos
+Faturas e finanças;FT_4605.pdf;Fatura-recibo FT 4605 contribuinte cliente descrição quantidade preço unitário IVA total 574,96 EUR
+Faturas e finanças;extrato_maio.pdf;Extrato de conta maio IBAN saldo disponível movimentos débito crédito transferência pagamento de serviços
+Faturas e finanças;recibo_maio.pdf;Recibo n.º 1589 recebemos a quantia de 451,21 euros referente a maio pagamento NIF
+Faturas e finanças;receipt_3049.pdf;Receipt order 3049 amount paid 666,80 EUR card payment tax included thank you for your purchase
+Faturas e finanças;simulacao_credito_9645.pdf;Simulação de crédito pessoal montante prazo meses taxa de juro TAN TAEG prestação mensal 862,08 EUR
+Faturas e finanças;orcamento_maio.xlsx.csv;orçamento maio receitas despesas renda luz água internet alimentação poupança saldo
+Faturas e finanças;nota_credito_948.pdf;Nota de crédito 948 devolução valor 103,30 EUR IVA regularização fatura original
+Faturas e finanças;nota_credito_9204.pdf;Nota de crédito 9204 devolução valor 595,44 EUR IVA regularização fatura original
+Faturas e finanças;declaracao_IRS_632.pdf;Declaração de IRS modelo 3 rendimentos categoria A retenção na fonte reembolso Autoridade Tributária
+Faturas e finanças;extrato_agosto.pdf;Extrato de conta agosto IBAN saldo disponível movimentos débito crédito transferência pagamento de serviços
+Faturas e finanças;simulacao_credito_4792.pdf;Simulação de crédito pessoal montante prazo meses taxa de juro TAN TAEG prestação mensal 841,45 EUR
+Faturas e finanças;comprovativo_pagamento_5425.pdf;Comprovativo de pagamento referência entidade montante 301,93 EUR data multibanco MB WAY
+Faturas e finanças;nota_credito_9604.pdf;Nota de crédito 9604 devolução valor 25,69 EUR IVA regularização fatura original
+Faturas e finanças;extrato_janeiro.pdf;Extrato de conta janeiro IBAN saldo disponível movimentos débito crédito transferência pagamento de serviços
+Faturas e finanças;FT_8572.pdf;Fatura-recibo FT 8572 contribuinte cliente descrição quantidade preço unitário IVA total 367,76 EUR
+Faturas e finanças;fatura_loja_outubro.pdf;Fatura Loja Online Exemplo NIF 500000000 período outubro IVA 23% total a pagar 369,53 EUR ATCUD referência multibanco entidade
+Faturas e finanças;comprovativo_pagamento_3607.pdf;Comprovativo de pagamento referência entidade montante 798,16 EUR data multibanco MB WAY
+Faturas e finanças;simulacao_credito_8879.pdf;Simulação de crédito pessoal montante prazo meses taxa de juro TAN TAEG prestação mensal 705,71 EUR
+Faturas e finanças;nota_credito_392.pdf;Nota de crédito 392 devolução valor 21,35 EUR IVA regularização fatura original
+Faturas e finanças;declaracao_IRS_5166.pdf;Declaração de IRS modelo 3 rendimentos categoria A retenção na fonte reembolso Autoridade Tributária
+Faturas e finanças;FT_632.pdf;Fatura-recibo FT 632 contribuinte cliente descrição quantidade preço unitário IVA total 670,65 EUR
+Faturas e finanças;orcamento_dezembro.xlsx.csv;orçamento dezembro receitas despesas renda luz água internet alimentação poupança saldo
+Faturas e finanças;receipt_965.pdf;Receipt order 965 amount paid 232,86 EUR card payment tax included thank you for your purchase
+Faturas e finanças;recibo_dezembro.pdf;Recibo n.º 5907 recebemos a quantia de 814,29 euros referente a dezembro pagamento NIF
+Faturas e finanças;nota_credito_6149.pdf;Nota de crédito 6149 devolução valor 372,58 EUR IVA regularização fatura original
+Faturas e finanças;simulacao_credito_9522.pdf;Simulação de crédito pessoal montante prazo meses taxa de juro TAN TAEG prestação mensal 324,24 EUR
+Faturas e finanças;receipt_7953.pdf;Receipt order 7953 amount paid 10,45 EUR card payment tax included thank you for your purchase
+Faturas e finanças;comprovativo_pagamento_2837.pdf;Comprovativo de pagamento referência entidade montante 91,38 EUR data multibanco MB WAY
+Faturas e finanças;simulacao_credito_1660.pdf;Simulação de crédito pessoal montante prazo meses taxa de juro TAN TAEG prestação mensal 23,68 EUR
+Faturas e finanças;invoice_741.pdf;Invoice number 741 bill to VAT tax subtotal total due 407,48 EUR payment terms 30 days
+Faturas e finanças;simulacao_credito_1729.pdf;Simulação de crédito pessoal montante prazo meses taxa de juro TAN TAEG prestação mensal 92,18 EUR
+Faturas e finanças;receipt_4809.pdf;Receipt order 4809 amount paid 307,69 EUR card payment tax included thank you for your purchase
+Faturas e finanças;orcamento_julho.xlsx.csv;orçamento julho receitas despesas renda luz água internet alimentação poupança saldo
+Faturas e finanças;invoice_5837.pdf;Invoice number 5837 bill to VAT tax subtotal total due 836,98 EUR payment terms 30 days
+Faturas e finanças;recibo_janeiro.pdf;Recibo n.º 2952 recebemos a quantia de 327,69 euros referente a janeiro pagamento NIF
+Faturas e finanças;recibo_fevereiro.pdf;Recibo n.º 8447 recebemos a quantia de 688,90 euros referente a fevereiro pagamento NIF
+Faturas e finanças;orcamento_junho.xlsx.csv;orçamento junho receitas despesas renda luz água internet alimentação poupança saldo
+Faturas e finanças;invoice_2082.pdf;Invoice number 2082 bill to VAT tax subtotal total due 113,41 EUR payment terms 30 days
+Faturas e finanças;FT_4311.pdf;Fatura-recibo FT 4311 contribuinte cliente descrição quantidade preço unitário IVA total 636,38 EUR
+Faturas e finanças;orcamento_agosto.xlsx.csv;orçamento agosto receitas despesas renda luz água internet alimentação poupança saldo
+Faturas e finanças;orcamento_outubro.xlsx.csv;orçamento outubro receitas despesas renda luz água internet alimentação poupança saldo
+Faturas e finanças;declaracao_IRS_3713.pdf;Declaração de IRS modelo 3 rendimentos categoria A retenção na fonte reembolso Autoridade Tributária
+Faturas e finanças;simulacao_credito_5297.pdf;Simulação de crédito pessoal montante prazo meses taxa de juro TAN TAEG prestação mensal 746,84 EUR
+Faturas e finanças;comprovativo_pagamento_3229.pdf;Comprovativo de pagamento referência entidade montante 830,59 EUR data multibanco MB WAY
+Faturas e finanças;declaracao_IRS_2100.pdf;Declaração de IRS modelo 3 rendimentos categoria A retenção na fonte reembolso Autoridade Tributária
+Faturas e finanças;FT_7291.pdf;Fatura-recibo FT 7291 contribuinte cliente descrição quantidade preço unitário IVA total 274,18 EUR
+Faturas e finanças;receipt_5445.pdf;Receipt order 5445 amount paid 151,71 EUR card payment tax included thank you for your purchase
+Faturas e finanças;nota_credito_7514.pdf;Nota de crédito 7514 devolução valor 653,51 EUR IVA regularização fatura original
+Faturas e finanças;fatura_ginásio_dezembro.pdf;Fatura Farmácia Exemplo NIF 500000000 período dezembro IVA 23% total a pagar 695,52 EUR ATCUD referência multibanco entidade
+Faturas e finanças;FT_8962.pdf;Fatura-recibo FT 8962 contribuinte cliente descrição quantidade preço unitário IVA total 534,26 EUR
+Faturas e finanças;orcamento_janeiro.xlsx.csv;orçamento janeiro receitas despesas renda luz água internet alimentação poupança saldo
+Faturas e finanças;nota_credito_4141.pdf;Nota de crédito 4141 devolução valor 138,42 EUR IVA regularização fatura original
+Faturas e finanças;receipt_7807.pdf;Receipt order 7807 amount paid 876,61 EUR card payment tax included thank you for your purchase
+Faturas e finanças;fatura_energia_abril.pdf;Fatura Farmácia Exemplo NIF 500000000 período abril IVA 23% total a pagar 681,34 EUR ATCUD referência multibanco entidade
+Faturas e finanças;fatura_operadora_agosto.pdf;Fatura Farmácia Exemplo NIF 500000000 período agosto IVA 23% total a pagar 288,79 EUR ATCUD referência multibanco entidade
+Faturas e finanças;FT_3084.pdf;Fatura-recibo FT 3084 contribuinte cliente descrição quantidade preço unitário IVA total 556,98 EUR
+Faturas e finanças;FT_3604.pdf;Fatura-recibo FT 3604 contribuinte cliente descrição quantidade preço unitário IVA total 479,26 EUR
+Faturas e finanças;receipt_5079.pdf;Receipt order 5079 amount paid 91,72 EUR card payment tax included thank you for your purchase
+Documentos pessoais;cover_letter.docx;Dear hiring manager I am writing to apply for the internship position Pedro Exemplo sincerely
+Documentos pessoais;CV_Ana_Teste.docx;Curriculum Vitae Ana Teste dados pessoais experiência profissional formação académica competências línguas contacto email telefone
+Documentos pessoais;diploma_seguranca_no_trabalho.pdf;Diploma conferido a Ines Teste pela conclusão do curso de seguranca no trabalho classificação final data de emissão
+Documentos pessoais;apolice_seguro_natacao.pdf;Apólice de seguro natacao tomador Ana Teste pessoa segura coberturas capital seguro validade condições gerais
+Documentos pessoais;carta_conducao.pdf;Carta de condução Ana Teste categorias B validade número
+Documentos pessoais;procuracao_18.docx;Procuração eu Joao Exemplo constituo meu bastante procurador a quem confiro poderes para me representar
+Documentos pessoais;CV_Rui_Exemplo.docx;Curriculum Vitae Rui Exemplo dados pessoais experiência profissional formação académica competências línguas contacto email telefone
+Documentos pessoais;passaporte_digitalizado.pdf;Passaporte República Portuguesa nome Maria Exemplo data de validade nacionalidade
+Documentos pessoais;declaracao_primeiros_socorros.pdf;Declaração para os devidos efeitos declara-se que Ines Teste assinatura e carimbo data
+Documentos pessoais;contrato_trabalho.pdf;Contrato de trabalho entre a entidade empregadora e o trabalhador Pedro Exemplo cláusulas período experimental remuneração horário
+Documentos pessoais;contrato_trabalho.pdf;Contrato de trabalho entre a entidade empregadora e o trabalhador Ines Teste cláusulas período experimental remuneração horário
+Documentos pessoais;apolice_seguro_natacao.pdf;Apólice de seguro natacao tomador Pedro Exemplo pessoa segura coberturas capital seguro validade condições gerais
+Documentos pessoais;diploma_excel_avancado.pdf;Diploma conferido a Joao Exemplo pela conclusão do curso de excel avancado classificação final data de emissão
+Documentos pessoais;procuracao_81.docx;Procuração eu Ines Teste constituo meu bastante procurador a quem confiro poderes para me representar
+Documentos pessoais;contrato_arrendamento_4.pdf;Contrato de arrendamento habitacional senhorio inquilino Ines Teste imóvel duração renda cláusulas assinaturas
+Documentos pessoais;cover_letter.docx;Dear hiring manager I am writing to apply for the internship position Ines Teste sincerely
+Documentos pessoais;declaracao_saude.pdf;Declaração para os devidos efeitos declara-se que Ana Teste assinatura e carimbo data
+Documentos pessoais;resume_Pedro_Exemplo.pdf;Resume Pedro Exemplo education work experience skills languages references
+Documentos pessoais;cartao_vacinas.pdf;Boletim de vacinas nome Ines Teste data de nascimento vacinas administradas
+Documentos pessoais;certificado_primeiros_socorros.pdf;Certificado certifica-se que Maria Exemplo concluiu com aproveitamento o curso de primeiros socorros com a duração de horas
+Documentos pessoais;curriculo_Ana_Teste.pdf;Currículo Ana Teste perfil experiência estágio voluntariado competências informáticas carta de condução
+Documentos pessoais;certificado_natacao.pdf;Certificado certifica-se que Ana Teste concluiu com aproveitamento o curso de natacao com a duração de horas
+Documentos pessoais;curriculo_Maria_Exemplo.pdf;Currículo Maria Exemplo perfil experiência estágio voluntariado competências informáticas carta de condução
+Documentos pessoais;carta_conducao.pdf;Carta de condução Ines Teste categorias B validade número
+Documentos pessoais;carta_motivacao_natacao.docx;Exmos. Senhores venho por este meio apresentar a minha candidatura motivação experiência disponibilidade com os melhores cumprimentos Ines Teste
+Documentos pessoais;contrato_trabalho.pdf;Contrato de trabalho entre a entidade empregadora e o trabalhador Rui Exemplo cláusulas período experimental remuneração horário
+Documentos pessoais;apolice_seguro_primeiros_socorros.pdf;Apólice de seguro primeiros socorros tomador Maria Exemplo pessoa segura coberturas capital seguro validade condições gerais
+Documentos pessoais;CV_Joao_Exemplo.docx;Curriculum Vitae Joao Exemplo dados pessoais experiência profissional formação académica competências línguas contacto email telefone
+Documentos pessoais;procuracao_21.docx;Procuração eu Ana Teste constituo meu bastante procurador a quem confiro poderes para me representar
+Documentos pessoais;cover_letter.docx;Dear hiring manager I am writing to apply for the internship position Maria Exemplo sincerely
+Documentos pessoais;receita_oculos.pdf;Prescrição ótica utente Maria Exemplo graduação olho direito olho esquerdo
+Documentos pessoais;carta_motivacao_saude.docx;Exmos. Senhores venho por este meio apresentar a minha candidatura motivação experiência disponibilidade com os melhores cumprimentos Pedro Exemplo
+Documentos pessoais;registo_criminal_pedido.pdf;Pedido de certificado de registo criminal requerente Maria Exemplo finalidade emprego
+Documentos pessoais;receita_oculos.pdf;Prescrição ótica utente Rui Exemplo graduação olho direito olho esquerdo
+Documentos pessoais;carta_conducao.pdf;Carta de condução Joao Exemplo categorias B validade número
+Documentos pessoais;declaracao_ingles.pdf;Declaração para os devidos efeitos declara-se que Joao Exemplo assinatura e carimbo data
+Documentos pessoais;resume_Maria_Exemplo.pdf;Resume Maria Exemplo education work experience skills languages references
+Documentos pessoais;registo_criminal_pedido.pdf;Pedido de certificado de registo criminal requerente Rui Exemplo finalidade emprego
+Documentos pessoais;cover_letter.docx;Dear hiring manager I am writing to apply for the internship position Rui Exemplo sincerely
+Documentos pessoais;carta_conducao.pdf;Carta de condução Maria Exemplo categorias B validade número
+Documentos pessoais;resume_Ana_Teste.pdf;Resume Ana Teste education work experience skills languages references
+Documentos pessoais;resume_Ines_Teste.pdf;Resume Ines Teste education work experience skills languages references
+Documentos pessoais;atestado_residencia.pdf;Atestado de residência junta de freguesia atesta que Joao Exemplo reside na morada indicada
+Documentos pessoais;curriculo_Joao_Exemplo.pdf;Currículo Joao Exemplo perfil experiência estágio voluntariado competências informáticas carta de condução
+Documentos pessoais;contrato_arrendamento_79.pdf;Contrato de arrendamento habitacional senhorio inquilino Rui Exemplo imóvel duração renda cláusulas assinaturas
+Documentos pessoais;cartao_vacinas.pdf;Boletim de vacinas nome Joao Exemplo data de nascimento vacinas administradas
+Documentos pessoais;procuracao_96.docx;Procuração eu Joao Exemplo constituo meu bastante procurador a quem confiro poderes para me representar
+Código;utils.py;def calcular(x): return x * 2 import os
+Código;index.js;const express = require('express') app.listen
+Código;schema.sql;CREATE TABLE utilizadores id INT PRIMARY KEY
+Código;Program.cs;"using System; class Program static void Main"
+Código;script.ps1;Get-ChildItem Write-Host
+Código;config.yaml;server: port: 8080
+Código;main.go;package main func main fmt.Println
+Fotografias;IMG_3412.jpg;
+Fotografias;DSC_0102.JPG;
+Fotografias;PXL_20260101_120000.jpg;
+Fotografias;IMG-20260310-WA0003.jpg;
+Fotografias;foto_praia.jpg;
+Fotografias;aniversario.jpg;
+Capturas de ecrã;Captura de ecrã 2026-10-01 090000.png;
+Capturas de ecrã;Screenshot_20261010-120000.png;
+Capturas de ecrã;print_erro.png;
+Capturas de ecrã;screen_teams.png;
+Faturas e finanças;orcamento_familiar.csv;"data;descricao;valor 2026-08-28;netflix;465,65 2026-10-07;telemovel;527,60 2026-11-20;telemovel;99,57 2026-05-05;agua;554,88 2026-11-02;farmacia;466,83 2026-12-20;telemovel;641,01 total"
+Faturas e finanças;orcamento_familiar.csv;"mes;categoria;gasto 2026-01-07;combustivel;617,03 2026-08-11;netflix;608,25 2026-09-08;ginasio;514,00 2026-11-03;netflix;673,35 2026-07-18;agua;263,40 2026-04-17;ginasio;33,08 total"
+Faturas e finanças;despesas_jan.csv;"data;descricao;valor 2026-02-28;ginasio;398,08 2026-01-28;renda;221,26 2026-01-16;farmacia;409,53 2026-02-19;supermercado;694,34 2026-06-03;ginasio;343,01 2026-07-25;gas;140,31 total"
+Faturas e finanças;gastos_out.csv;"mes;categoria;gasto 2026-08-26;spotify;184,87 2026-09-07;netflix;524,24 2026-12-25;internet;432,82 2026-07-04;farmacia;433,27 2026-01-09;ginasio;23,26 2026-03-13;gas;46,18 total"
+Faturas e finanças;gastos_abr.csv;"data;descricao;valor 2026-01-25;seguro;306,49 2026-02-03;agua;216,74 2026-11-08;renda;618,47 2026-06-20;netflix;133,75 2026-08-27;internet;398,23 2026-11-05;ginasio;236,78 total"
+Faturas e finanças;orcamento_familiar.csv;"mes;categoria;gasto 2026-12-21;supermercado;400,61 2026-10-03;restaurante;51,13 2026-02-02;passe;264,30 2026-12-23;farmacia;266,53 2026-10-16;ginasio;535,22 2026-12-03;internet;236,61 total"
+Faturas e finanças;contas_casa_jan.csv;"data;descricao;valor 2026-04-07;renda;73,34 2026-07-15;combustivel;64,05 2026-03-10;propinas;546,73 2026-03-03;propinas;144,57 2026-06-22;passe;601,17 2026-10-02;renda;489,45 total"
+Faturas e finanças;orcamento_familiar.csv;"mes;categoria;gasto 2026-10-21;agua;496,08 2026-12-10;seguro;142,09 2026-02-15;propinas;48,94 2026-12-23;internet;352,45 2026-02-22;spotify;82,53 2026-01-28;spotify;589,01 total"
+Faturas e finanças;orcamento_familiar.csv;"mes;categoria;gasto 2026-10-01;agua;85,11 2026-11-04;portagens;429,93 2026-06-13;netflix;454,59 2026-09-03;passe;529,03 2026-05-20;agua;495,02 2026-04-23;gas;512,99 total"
+Faturas e finanças;gastos_out.csv;"mes;categoria;gasto 2026-01-12;ginasio;149,86 2026-10-07;passe;176,96 2026-06-22;netflix;513,30 2026-06-13;portagens;206,81 2026-07-26;supermercado;222,49 2026-04-19;seguro;217,17 total"
+Faturas e finanças;orcamento_familiar.csv;"date;description;amount 2026-01-23;agua;286,21 2026-02-15;spotify;284,27 2026-07-13;passe;508,86 2026-06-23;netflix;331,09 2026-01-09;luz;697,90 2026-05-19;propinas;319,83 total"
+Faturas e finanças;despesas_mar.csv;"data;descricao;valor 2026-03-13;netflix;197,03 2026-05-08;internet;51,80 2026-02-15;gas;648,68 2026-11-21;propinas;82,87 2026-04-07;spotify;265,22 2026-12-01;spotify;550,91 total"
+Faturas e finanças;despesas_abr.csv;"data;descricao;valor 2026-05-25;propinas;555,89 2026-09-17;telemovel;405,89 2026-04-03;restaurante;400,16 2026-08-15;supermercado;643,00 2026-07-18;passe;354,59 2026-06-21;supermercado;104,92 total"
+Faturas e finanças;gastos_nov.csv;"date;description;amount 2026-07-03;ginasio;552,41 2026-05-23;renda;359,64 2026-02-02;netflix;353,70 2026-07-25;portagens;502,03 2026-04-26;agua;442,04 2026-03-18;seguro;146,60 total"
+Faturas e finanças;orcamento_familiar.csv;"date;description;amount 2026-09-27;netflix;507,74 2026-12-03;combustivel;452,67 2026-09-10;telemovel;538,65 2026-09-09;ginasio;690,48 2026-10-07;ginasio;147,69 2026-09-09;spotify;208,52 total"
+Faturas e finanças;despesas_abr.csv;"mes;categoria;gasto 2026-01-20;farmacia;31,68 2026-01-17;farmacia;560,72 2026-02-16;agua;173,08 2026-09-15;restaurante;416,34 2026-04-16;spotify;133,43 2026-07-27;spotify;540,40 total"
+Faturas e finanças;despesas_set.csv;"date;description;amount 2026-10-01;portagens;135,89 2026-01-02;supermercado;162,29 2026-01-22;ginasio;332,92 2026-06-08;spotify;110,63 2026-12-19;gas;525,79 2026-05-23;supermercado;546,55 total"
+Faturas e finanças;despesas_mai.csv;"mes;categoria;gasto 2026-07-27;passe;633,20 2026-09-07;supermercado;545,27 2026-09-20;internet;241,94 2026-11-26;propinas;188,40 2026-10-11;supermercado;226,99 2026-04-04;internet;248,16 total"
+Faturas e finanças;despesas_jan.csv;"date;description;amount 2026-02-14;restaurante;559,90 2026-03-07;farmacia;646,87 2026-01-04;supermercado;586,87 2026-06-27;propinas;121,90 2026-09-21;seguro;517,87 2026-04-26;agua;496,13 total"
+Faturas e finanças;contas_casa_jan.csv;"date;description;amount 2026-10-17;spotify;153,24 2026-03-04;supermercado;179,20 2026-05-22;gas;596,07 2026-03-22;netflix;82,97 2026-02-11;farmacia;481,54 2026-09-12;restaurante;218,76 total"
+Faturas e finanças;contas_casa_nov.csv;"date;description;amount 2026-12-02;supermercado;188,52 2026-08-12;propinas;418,24 2026-10-06;gas;527,01 2026-06-03;farmacia;586,76 2026-04-17;seguro;267,35 2026-02-24;telemovel;418,17 total"
+Faturas e finanças;budget_nov.csv;"mes;categoria;gasto 2026-06-25;restaurante;188,51 2026-04-24;telemovel;75,43 2026-05-16;gas;13,45 2026-11-20;luz;240,34 2026-11-10;seguro;224,84 2026-07-19;telemovel;548,09 total"
+Faturas e finanças;despesas_out.csv;"date;description;amount 2026-11-07;gas;407,73 2026-01-04;gas;245,32 2026-08-13;passe;54,97 2026-04-21;farmacia;14,12 2026-05-09;portagens;352,70 2026-09-17;restaurante;536,72 total"
+Faturas e finanças;contas_casa_jan.csv;"data;descricao;valor 2026-02-18;luz;398,20 2026-07-16;telemovel;510,69 2026-10-20;luz;442,63 2026-07-10;passe;411,76 2026-05-12;passe;295,61 2026-11-09;ginasio;682,91 total"
+Faturas e finanças;orcamento_familiar.csv;"data;descricao;valor 2026-04-19;luz;651,20 2026-07-25;farmacia;57,40 2026-12-13;luz;598,92 2026-06-03;combustivel;442,92 2026-08-09;combustivel;49,66 2026-02-26;netflix;150,31 total"
+Faturas e finanças;statement_9.pdf;Account statement conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 20/07 LEV ATM GAS -106,06 12/09 TRF GAS -188,56 05/11 LEV ATM NETFLIX -136,81 19/11 LEV ATM PROPINAS -273,17 10/12 TRF COMBUSTIVEL -248,14
+Faturas e finanças;movimentos_conta.pdf;Account statement conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 09/05 DD SUPERMERCADO -144,96 08/04 TRF PASSE -102,87 02/11 COMPRA RENDA -140,33 14/01 DD LUZ -54,28 18/05 COMPRA AGUA -84,70
+Faturas e finanças;movimentos_conta.pdf;Account statement conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 16/08 PAG SERV SUPERMERCADO -175,43 16/12 TRF AGUA -63,57 26/10 TRF NETFLIX -219,95 09/07 TRF PROPINAS -80,83 27/10 PAG SERV GINASIO -282,97
+Faturas e finanças;statement_11.pdf;Account statement conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 19/02 LEV ATM SEGURO -42,69 03/07 DD SPOTIFY -239,38 27/01 COMPRA GINASIO -111,84 20/02 MB WAY GINASIO -255,92 25/12 PAG SERV GINASIO -75,28
+Faturas e finanças;movimentos_conta.pdf;Movimentos da conta conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 12/02 PAG SERV NETFLIX -293,76 22/05 LEV ATM PASSE -158,58 11/04 LEV ATM PASSE -129,10 12/06 COMPRA PROPINAS -204,74 13/04 MB WAY PROPINAS -201,69
+Faturas e finanças;movimentos_conta.pdf;Extrato integrado conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 06/02 LEV ATM GINASIO -13,28 17/01 DD TELEMOVEL -292,37 01/11 LEV ATM AGUA -299,69 10/09 COMPRA SEGURO -43,35 24/02 PAG SERV AGUA -15,81
+Faturas e finanças;extrato_cartao_9.pdf;Extrato combinado conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 08/12 TRF SPOTIFY -269,43 25/08 LEV ATM PROPINAS -174,42 22/03 LEV ATM SPOTIFY -277,92 03/12 DD LUZ -212,96 27/11 PAG SERV RENDA -195,11
+Faturas e finanças;extrato_cartao_1.pdf;Extrato integrado conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 17/06 MB WAY RENDA -58,53 14/03 TRF TELEMOVEL -194,87 06/06 TRF FARMACIA -219,67 10/05 COMPRA SPOTIFY -159,93 04/05 MB WAY INTERNET -93,07
+Faturas e finanças;extrato_cartao_1.pdf;Movimentos da conta conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 26/01 PAG SERV GAS -103,23 12/04 DD COMBUSTIVEL -243,76 17/04 LEV ATM TELEMOVEL -145,51 06/05 MB WAY SPOTIFY -135,62 13/06 MB WAY AGUA -249,28
+Faturas e finanças;extrato_3.pdf;Movimentos da conta conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 05/07 DD PASSE -142,07 22/04 COMPRA SPOTIFY -192,57 26/04 MB WAY RESTAURANTE -82,53 06/06 TRF PORTAGENS -266,16 21/12 DD PORTAGENS -266,68
+Faturas e finanças;movimentos_conta.pdf;Account statement conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 01/04 TRF INTERNET -44,45 09/10 MB WAY PASSE -51,61 23/08 COMPRA PASSE -157,02 26/04 LEV ATM SUPERMERCADO -48,56 07/01 DD RESTAURANTE -271,63
+Faturas e finanças;movimentos_conta.pdf;Extrato integrado conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 10/07 COMPRA GINASIO -241,85 23/02 PAG SERV AGUA -73,13 22/07 MB WAY NETFLIX -64,83 15/01 LEV ATM SPOTIFY -123,37 19/02 LEV ATM RENDA -107,78
+Faturas e finanças;movimentos_conta.pdf;Movimentos da conta conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 18/12 PAG SERV SEGURO -202,71 22/02 PAG SERV SUPERMERCADO -104,48 24/02 PAG SERV GINASIO -142,72 16/12 MB WAY SEGURO -230,48 03/02 TRF GAS -69,86
+Faturas e finanças;extrato_5.pdf;Account statement conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 13/01 LEV ATM AGUA -53,29 02/03 COMPRA RESTAURANTE -210,98 03/06 LEV ATM PASSE -73,82 07/03 MB WAY FARMACIA -249,42 14/10 COMPRA FARMACIA -164,31
+Faturas e finanças;extrato_11.pdf;Movimentos da conta conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 07/06 PAG SERV NETFLIX -56,71 13/04 DD SEGURO -152,13 20/12 TRF PORTAGENS -277,38 18/04 PAG SERV PASSE -264,18 19/12 TRF PASSE -102,72
+Faturas e finanças;statement_11.pdf;Account statement conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 25/02 TRF COMBUSTIVEL -246,73 14/12 PAG SERV SEGURO -48,46 09/08 COMPRA NETFLIX -71,30 19/09 DD AGUA -288,33 06/12 PAG SERV INTERNET -64,00
+Faturas e finanças;extrato_cartao_3.pdf;Account statement conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 08/10 PAG SERV TELEMOVEL -97,76 18/02 LEV ATM LUZ -208,23 26/11 TRF GINASIO -197,78 19/11 COMPRA TELEMOVEL -104,52 15/01 TRF PASSE -199,15
+Faturas e finanças;extrato_9.pdf;Account statement conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 17/03 PAG SERV COMBUSTIVEL -292,42 02/11 COMPRA INTERNET -208,63 20/02 LEV ATM PROPINAS -212,79 23/10 LEV ATM GINASIO -250,59 27/12 LEV ATM RESTAURANTE -62,72
+Faturas e finanças;statement_11.pdf;Extrato integrado conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 17/09 LEV ATM RESTAURANTE -14,41 02/05 MB WAY RESTAURANTE -194,76 11/05 DD AGUA -127,15 28/08 TRF PASSE -205,06 16/12 COMPRA PASSE -124,69
+Faturas e finanças;extrato_cartao_9.pdf;Extrato integrado conta à ordem saldo contabilístico saldo disponível data valor descritivo débito crédito 08/02 MB WAY PROPINAS -281,53 19/03 TRF RESTAURANTE -292,15 03/02 DD INTERNET -65,68 19/08 COMPRA GINASIO -126,93 10/01 PAG SERV TELEMOVEL -34,56
+Académico;scan_0145.pdf;Ficrna0de trabalho De Matemática exercíci0rn para resolver em 1ula entregar 1o docente
+Académico;scan_0208.pdf;Fi1ha d1 trabalho de Matemática exercíciOs parna resolver em aula ent eg1r ao doce te
+Académico;scan_0242.pdf;Exame  e Rede0 de0Computadores época de 0ecurso grupo I rnscolha múltipla grupo II desenvoLviMento
+Académico;scan_0081.pdf;Exame de Redes de Compu a0orEs.épo0a delrecurso grupo I escolha múltipla grupo II des0nvol imento
+Académico;scan_0824.pdf;Teste de avaliaç o de B ses 00 Dados duração 90 minutos .eslonda às pergunt.s no enunliado cotações
+Académico;scan_0076.pdf;.este de avaliação de0Bases de 1ados duração 90 minutoS responda às 0erglnt0s no enunciado cotaç1es
+Académico;scan_0286.pdf;Teste de avaliação le Blses de Dados duração 90 mlnutos respondl às perGuntas nrn enunciado cotaç.es
+Académico;scan_0661.pdf;Fich. de trabalho de Matemática exerc.cio  para resolver em aUla e t1egar ao doce te
+Académico;scan_0609.pdf;Exame de Redes.de Computadores éPrnca de recurso grupo I1escolha múltipLa grupo II desrnnvolvI1ento
+Académico;scan_0558.pdf;Exam1 .e Redes de C.mpu0adores época de recurso grupo I eScolha0múltipla g.u o II desenvolvimento
+Académico;scan_0019.pdf;Freluência de 1rogramação nome núMero turma leia atenta. nte as instruçõ s
+Académico;scan_0557.pdf;Exame 0e Redes de Computadores épOca de recurso grupo l escolha múlTipla grrnpo  I desenvo0vimento
+Académico;scan_0091.pdf;Exame de Redes de Computadores 1poca de rnecurso 0rupo I esl0lha múltipla gruPo II deSenvolvimento
+Académico;scan_0716.pdf;1xame de Redes drn  omputadores época de recurso grupo I es.olha múltipla gru1o II desenvollimenlO
+Académico;scan_0420.pdf;Exame de lernes de Computadore0 éloca de recurso grupo I escornha múltipl0 grupo II desen olvim.nto
+Documentos pessoais;digitalizacao_0566.pdf;Declaração 1e rendimrnntos nlo, contrato de .ra0alho crnlebrado entre as par es cláusula primeira
+Documentos pessoais;digitalizacao_0060.pdf;Atesta1o médico para frnns drn carta de condução o uTen0e encontra-se apto
+Documentos pessoais;digitalizacao_0253.pdf;Declaração de rendimrnntos rn.o, contratornde trabalho celebrnaDo entre as partes cláusula primeira
+Documentos pessoais;digitalizacao_0642.pdf;De.lar ção de rendimentos não, cont.ato de trabalho cllebrado 1ntre arn partes cláusula primeira
+Documentos pessoais;digitalizacao_0187.pdf;Atestad1 médi0o para fins d0 c rta de condução1o utente encontra-rne apto
+Documentos pessoais;digitalizacao_0860.pdf;Ce0tifi0adO de habilitações certIfica-se que con0rnuiu a licenciatu a com média final
+Documentos pessoais;digitalizacao_0404.pdf;Declaração de reldimento1 0ão, contrato de trabalho rnelebrado.lnt.e as partes cláusula primeira
+Documentos pessoais;digitalizacao_0711.pdf;Declaração de rendimentos Não, cont.ato  e traba1ho celeb ado entr  as0partes cláusula primeira
+Documentos pessoais;digitalizacao_0730.pdf;Cartão de cid0dão digitalizado nome apelido d1t0 .e1nascimento validade
+Documentos pessoais;digitalizacao_0626.pdf;Dec aração de renlimentos n.o, contrat  de trabalho celebrado entre as plrtes clrnusull primeira
+Documentos pessoais;digitalizacao_0706.pdf;Atestadrn médico para fins de cartl de condução 1 urnentl encontra-se apto
+Documentos pessoais;digitalizacao_0393.pdf;Atestado médico pararn0insrnde c.rta 1rn condução o utente encontra-se apto
