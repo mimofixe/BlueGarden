@@ -5,3 +5,4 @@ __pycache__/
 .venv/
 ai/modelo/
 .DS_Store
+.idea/
