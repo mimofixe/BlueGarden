@@ -13,6 +13,7 @@ from fastapi.responses import JSONResponse
 import auth
 import db
 import files
+import perfil
 import storage
 
 INSTANCIA = os.getenv("INSTANCIA", "local")
@@ -22,6 +23,7 @@ log = logging.getLogger("bluegarden")
 app = FastAPI(title="Blue Garden API", version="0.1.0", docs_url="/api/docs", openapi_url="/api/openapi.json")
 app.include_router(auth.router)
 app.include_router(files.router)
+app.include_router(perfil.router)
 
 
 @app.on_event("startup")

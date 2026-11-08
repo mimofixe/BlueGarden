@@ -46,6 +46,7 @@ O utilizador carrega os ficheiros e encontra-os já arrumados. Quando a IA não 
 | **Categorização automática** | Académico · Fotografias · Capturas de ecrã · Código · Faturas e finanças · Documentos pessoais · Por rever |
 | **Correções** | O utilizador corrige a categoria e a correção fica guardada para retreino |
 | **Reciclagem** | Apagar, restaurar ou eliminar definitivamente |
+| **Perfil** | Foto de perfil (cifrada como os ficheiros) e modo escuro, guardados na conta |
 | **Tolerância a faltas** | O sistema continua a funcionar com backends, nós da BD ou nós de armazenamento em baixo |
 
 ## Arquitetura

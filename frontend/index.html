@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blue Garden — Entrar</title>
+  <script src="tema.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="pagina-login">
@@ -32,7 +33,7 @@
   </main>
 
   <script>
-    if (localStorage.getItem("bg_token")) location.href = "app.html";
+    if (localStorage.getItem("bg_token")) location.replace("app.html");
 
     let modo = "login";
     const form = document.getElementById("form-auth");
@@ -65,7 +66,7 @@
         }
         localStorage.setItem("bg_token", dados.token);
         localStorage.setItem("bg_nome", dados.nome);
-        location.href = "app.html";
+        location.replace("app.html");
       } catch {
         erro.textContent = "Servidor indisponível. Tenta novamente.";
       }

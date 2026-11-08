@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blue Garden — Definições</title>
+  <script src="tema.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <a href="app.html" class="logo"><span class="logo-icone">❀</span> Blue Garden</a>
+    <div class="conta">
+      <button id="avatar-botao" class="avatar" data-avatar aria-haspopup="menu" aria-expanded="false" aria-controls="painel-conta" aria-label="Menu da conta"></button>
+      <div id="painel-conta" class="painel-conta" role="menu" hidden>
+        <div class="painel-cabecalho">
+          <span class="avatar avatar-medio" data-avatar aria-hidden="true"></span>
+          <div class="painel-identidade">
+            <strong id="painel-nome"></strong>
+            <span id="painel-email"></span>
+          </div>
+        </div>
+        <a href="definicoes.html" class="painel-item" role="menuitem" aria-current="page">Definições</a>
+        <button id="sair" class="painel-item" role="menuitem">Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="definicoes">
+    <a href="app.html" class="voltar">← Voltar aos ficheiros</a>
+    <h1>Definições</h1>
+
+    <section class="cartao-definicoes" aria-labelledby="titulo-foto">
+      <h2 id="titulo-foto">Foto de perfil</h2>
+      <div class="linha-foto">
+        <span class="avatar avatar-grande" data-avatar aria-hidden="true"></span>
+        <div>
+          <div class="botoes-foto">
+            <button class="botao primario" id="escolher-foto">Escolher foto</button>
+            <button class="botao" id="remover-foto" hidden>Remover foto</button>
+          </div>
+          <p class="ajuda">PNG, JPEG, WebP ou GIF. A imagem é recortada num quadrado.</p>
+        </div>
+      </div>
+      <input type="file" id="input-foto" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+    </section>
+
+    <section class="cartao-definicoes" aria-labelledby="titulo-aparencia">
+      <h2 id="titulo-aparencia">Aparência</h2>
+      <label class="linha-opcao" for="modo-escuro">
+        <span>
+          <strong>Modo escuro</strong>
+          <span class="ajuda">Fica guardado na tua conta e aplica-se em qualquer computador.</span>
+        </span>
+        <input type="checkbox" id="modo-escuro" class="interruptor" role="switch">
+      </label>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="comum.js"></script>
+  <script src="definicoes.js"></script>
+</body>
+</html>
