@@ -1,15 +1,5 @@
-"""Worker de IA: categoriza os ficheiros com estado PENDENTE.
+"""Worker de IA: categoriza os ficheiros com estado PENDENTE."""
 
-A fila é a própria coleção "ficheiros" no MongoDB:
-  PENDENTE -> EM_ANALISE -> CATEGORIZADO
-
-Tolerância a faltas:
-- Se o worker estiver em baixo, os uploads continuam; os ficheiros ficam PENDENTE.
-- Se o worker morrer a meio, o ficheiro fica EM_ANALISE; ao fim de 5 minutos
-  volta a PENDENTE e é processado de novo (ver recuperar_presos).
-- A passagem PENDENTE -> EM_ANALISE é atómica (find_one_and_update), por isso
-  mesmo com vários workers cada ficheiro só é analisado por um.
-"""
 import logging
 import os
 import time

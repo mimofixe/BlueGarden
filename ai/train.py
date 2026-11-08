@@ -1,15 +1,5 @@
-"""Treino do classificador.
+"""Treino do classificador."""
 
-Fontes de dados (juntam-se todas):
-  1. ai/dataset/sementes.csv            — exemplos iniciais escritos à mão
-  2. ai/dataset/<Categoria>/<ficheiros> — ficheiros reais do grupo, anonimizados
-  3. coleção "correcoes" do MongoDB     — correções feitas pelos utilizadores (--correcoes)
-
-Uso:
-  python train.py                 # sementes + pasta dataset
-  python train.py --correcoes     # inclui as correções dos utilizadores
-  python train.py --avaliar       # mostra validação cruzada antes de gravar
-"""
 import argparse
 import csv
 import os
