@@ -263,6 +263,21 @@ def categorias():
     return {"categorias": CATEGORIAS}
 
 
+# ---------- resumo (contagens da barra lateral do frontend) ----------
+
+@router.get("/resumo")
+def resumo(uid: ObjectId = Depends(utilizador_atual)):
+    """Quantos ficheiros há em cada categoria."""
+    contagens = {c: 0 for c in CATEGORIAS}
+    for r in db.ficheiros().aggregate([
+        {"$match": {"utilizador_id": uid, "apagado": False, "estado": "CATEGORIZADO"}},
+        {"$group": {"_id": "$categoria", "n": {"$sum": 1}}},
+    ]):
+        if r["_id"] in contagens:
+            contagens[r["_id"]] = r["n"]
+    return {"categorias": contagens}
+
+
 class NovaCategoria(BaseModel):
     categoria: str
 

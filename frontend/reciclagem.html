@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blue Garden — Reciclagem</title>
+  <script src="tema.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ficheiros.css">
+</head>
+<body class="app" data-pagina="reciclagem">
+  <header class="bg-topo">
+    <a href="app.html" class="logo"><span class="logo-icone">❀</span> Blue Garden</a>
+    <input id="pesquisa" class="bg-pesquisa" type="search" placeholder="Pesquisar ficheiros…" aria-label="Pesquisar ficheiros">
+    <div class="conta">
+      <button id="avatar-botao" class="avatar" data-avatar aria-haspopup="menu" aria-expanded="false" aria-controls="painel-conta" aria-label="Menu da conta"></button>
+      <div id="painel-conta" class="painel-conta" role="menu" hidden>
+        <div class="painel-cabecalho">
+          <span class="avatar avatar-medio" data-avatar aria-hidden="true"></span>
+          <div class="painel-identidade">
+            <strong id="painel-nome"></strong>
+            <span id="painel-email"></span>
+          </div>
+        </div>
+        <a href="definicoes.html" class="painel-item" role="menuitem">Definições</a>
+        <button id="sair" class="painel-item" role="menuitem">Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="bg-layout">
+    <nav class="bg-lateral" aria-label="Principal">
+      <div class="bg-nav">
+        <a href="app.html" data-vista="ficheiros">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Os meus ficheiros
+        </a>
+        <a href="reciclagem.html" data-vista="reciclagem" class="ativo" aria-current="page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"/></svg>
+          Reciclagem
+        </a>
+      </div>
+
+      <div class="bg-categorias" id="bloco-categorias">
+        <h2 class="bg-rotulo">Categorias (IA)</h2>
+        <ul id="menu-categorias"></ul>
+      </div>
+    </nav>
+
+    <main class="bg-principal" id="zona-drop" aria-live="polite">
+      <div id="migalhas" class="bg-migalhas"></div>
+      <div class="bg-titulo-linha">
+        <div>
+          <h1 class="bg-titulo" id="titulo">Reciclagem</h1>
+          <p class="bg-subtitulo" id="subtitulo" hidden></p>
+        </div>
+        <button type="button" class="bg-botao perigo" id="botao-esvaziar" hidden>Esvaziar reciclagem</button>
+      </div>
+      <p id="aviso" class="bg-aviso" hidden></p>
+      <div id="conteudo"></div>
+    </main>
+  </div>
+
+  <!-- Menu do clique direito (preenchido pelo app.js) -->
+  <ul id="menu-contexto" class="bg-menu" role="menu" hidden></ul>
+
+  <!-- Nova pasta -->
+  <dialog id="dialogo-pasta" class="bg-dialogo" aria-labelledby="dialogo-pasta-titulo">
+    <form method="dialog" id="form-pasta">
+      <h2 id="dialogo-pasta-titulo">Nova pasta</h2>
+      <p id="dialogo-pasta-local"></p>
+      <label>Nome da pasta
+        <input id="nome-pasta" name="nome" maxlength="100" autocomplete="off" required>
+      </label>
+      <div class="botoes">
+        <button type="button" class="bg-botao" value="cancelar" id="cancelar-pasta">Cancelar</button>
+        <button type="submit" class="bg-botao primario" value="criar">Criar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Confirmação genérica -->
+  <dialog id="dialogo-confirmar" class="bg-dialogo" aria-labelledby="confirmar-titulo">
+    <form method="dialog">
+      <h2 id="confirmar-titulo"></h2>
+      <p id="confirmar-texto"></p>
+      <div class="botoes">
+        <button type="submit" class="bg-botao" value="nao">Cancelar</button>
+        <button type="submit" class="bg-botao primario" value="sim" id="confirmar-sim"></button>
+      </div>
+    </form>
+  </dialog>
+
+  <input type="file" id="input-ficheiro" multiple hidden>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script src="comum.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
