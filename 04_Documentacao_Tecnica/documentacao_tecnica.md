@@ -1,8 +1,34 @@
-# Estrutura da base de dados
+# Documentação técnica
+
+## Arquitetura do sistema
+
+- Arquitetura distribuída: `02_Imagens/img_05.jpg`
+- Modelo de faltas: `02_Imagens/img_06.jpg`
+
+## Diagramas UML
+
+- Casos de uso: `02_Imagens/img_04.jpg`
+- Classes: `02_Imagens/img_07.jpg`
+- Sequência (carregar um ficheiro): `02_Imagens/img_08.jpg`
+
+## Capturas da aplicação
+
+`02_Imagens/img_09.png` a `02_Imagens/img_15.png`
+
+## Repositório Git
+
+https://github.com/mimofixe/BlueGarden
+
+- Ramo `codigo`: o protótipo (backend, frontend, IA, Docker Compose e script de testes de falha).
+- Ramo `main`: este arquivo.
+
+O relatório e a memória descritiva da 1.ª entrega estão em `entregas_anteriores/`.
+
+## Estrutura da base de dados
 
 Base de dados `bluegarden` no MongoDB (replica set `rs0`, 3 nós). Os ficheiros em si não ficam aqui: ficam cifrados no MinIO, e o MongoDB guarda só a chave (`chave_minio`).
 
-## Coleção `utilizadores`
+### Coleção `utilizadores`
 
 | Campo | Tipo | Notas |
 | --- | --- | --- |
@@ -16,7 +42,7 @@ Base de dados `bluegarden` no MongoDB (replica set `rs0`, 3 nós). Os ficheiros 
 | `tema` | String | `claro` ou `escuro` |
 | `foto` | Objeto | `tipo`, `tamanho`, `atualizada_em`; a imagem fica cifrada no MinIO |
 
-## Coleção `ficheiros`
+### Coleção `ficheiros`
 
 Também funciona como fila do worker de IA (campo `estado`).
 
@@ -43,7 +69,7 @@ Também funciona como fila do worker de IA (campo `estado`).
 
 Índices: (`utilizador_id`, `apagado`, `pasta`) e (`estado`, `criado_em`).
 
-## Coleção `correcoes`
+### Coleção `correcoes`
 
 Cada correção feita pelo utilizador. Serve para voltar a treinar o modelo (`train.py --correcoes`).
 
@@ -56,7 +82,7 @@ Cada correção feita pelo utilizador. Serve para voltar a treinar o modelo (`tr
 | `categoria_nova` | String | o que o utilizador escolheu |
 | `criado_em` | Date | |
 
-## Garantias
+### Garantias
 
 - As escritas usam `w: majority`: só são confirmadas quando 2 dos 3 nós as têm.
 - O upload grava primeiro no MinIO e só depois no MongoDB, para nunca haver metadados a apontar para um ficheiro que não existe.
