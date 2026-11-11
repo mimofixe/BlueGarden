@@ -5,6 +5,7 @@ Regras importantes:
 - Upload: primeiro grava no MinIO, só depois cria o documento no MongoDB.
   Assim nunca há metadados a apontar para um ficheiro que não existe.
 - Eliminar = apagado: true (reciclagem). Só "eliminar definitivamente" remove do MinIO.
+- Eliminar uma pasta = mandar os ficheiros dela (e das subpastas) para a reciclagem.
 - O novo ficheiro fica com estado PENDENTE: é a fila do worker de IA.
 """
 import os
@@ -141,6 +142,21 @@ def criar_pasta(dados: NovaPasta, uid: ObjectId = Depends(utilizador_atual)):
         raise HTTPException(400, "Nome de pasta inválido")
     db.utilizadores().update_one({"_id": uid}, {"$addToSet": {"pastas": caminho}})
     return {"caminho": caminho}
+
+
+@router.delete("/pastas")
+def eliminar_pasta(caminho: str, uid: ObjectId = Depends(utilizador_atual)):
+    caminho = normalizar_pasta(caminho)
+    if caminho == "/":
+        raise HTTPException(400, "Não dá para eliminar a pasta principal")
+    # A própria pasta e tudo o que está por baixo dela
+    dentro = {"$regex": "^" + re.escape(caminho) + "(/|$)"}
+    r = db.ficheiros().update_many(
+        {"utilizador_id": uid, "apagado": False, "pasta": dentro},
+        {"$set": {"apagado": True, "apagado_em": _agora()}},
+    )
+    db.utilizadores().update_one({"_id": uid}, {"$pull": {"pastas": dentro}})
+    return {"ok": True, "ficheiros": r.modified_count}
 
 
 # ---------- upload / download ----------

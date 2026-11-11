@@ -1,6 +1,6 @@
 // Blue Garden — páginas de ficheiros (app.html) e reciclagem (reciclagem.html), sem frameworks.
 // Usa api(), json(), toast(), esc() e $() definidos em comum.js.
-// "Nova pasta" e "Carregar ficheiros" estão no menu do clique direito.
+// "Nova pasta" e "Carregar ficheiros" estão no menu do clique direito; "Eliminar pasta" no de cada pasta.
 //
 // Cada pasta, categoria e pesquisa tem o seu endereço (ex.: app.html?pasta=/Fotos),
 // por isso o botão "Voltar" do browser volta à pasta anterior.
@@ -316,6 +316,14 @@ async function eliminar(id) {
   atualizarTudo();
 }
 
+async function eliminarPasta(caminho) {
+  const ok = await confirmar("Eliminar a pasta?", `A pasta “${nomePasta(caminho)}” desaparece e os ficheiros que tem vão para a reciclagem, de onde podem ser recuperados.`, "Eliminar pasta");
+  if (!ok) return;
+  await api(`/pastas?caminho=${encodeURIComponent(caminho)}`, { method: "DELETE" });
+  toast(`Pasta “${nomePasta(caminho)}” eliminada`);
+  atualizarTudo();
+}
+
 async function restaurar(id) {
   await api(`/ficheiros/${id}/restaurar`, { method: "POST" });
   toast("Ficheiro recuperado");
@@ -471,7 +479,11 @@ function itensDoFicheiro(id) {
 }
 
 function itensDaPasta(caminho) {
-  const itens = [{ rotulo: "Abrir", icone: "abrir", acao: () => abrirPasta(caminho) }];
+  const itens = [
+    { rotulo: "Abrir", icone: "abrir", acao: () => abrirPasta(caminho) },
+    "-",
+    { rotulo: "Eliminar pasta", icone: "eliminar", perigo: true, acao: () => eliminarPasta(caminho) },
+  ];
   return itens.concat("-", itensDaArea());
 }
 
