@@ -4,7 +4,7 @@
 
 **Repositório de Ficheiros Distribuído On-Line**
 
-1.ª entrega
+2.ª entrega
 
 ---
 
@@ -16,10 +16,18 @@ Lucas Nicolau - 20241526
 
 **Grupo 3**
 
-Projeto de Desenvolvimento de Software · Licenciatura em Engenharia Informática
-3.º ano · 5.º semestre · 2026/2027 · IADE - Universidade Europeia
-Docente: Rui Pascoal
-Outubro de 2026
+Licenciatura em Engenharia Informática · 3.º ano · 5.º semestre · 2026/2027 · IADE - Universidade Europeia
+Novembro de 2026
+
+## Identificação
+
+| | |
+| --- | --- |
+| **Nome do projeto** | Blue Garden — Repositório de Ficheiros Distribuído On-Line |
+| **Ano letivo** | 2026/2027 |
+| **Semestre** | 5.º semestre |
+| **Unidades curriculares** | Projeto de Desenvolvimento de Software; Engenharia de Software; Sistemas Distribuídos; Inteligência Artificial; Segurança Informática |
+| **Docentes** | Rui Pascoal e Miguel Boavida; Rui Ramos; Pedro Rosa; Samuel Gomes; Sérgio Nunes e Pedro Brandão |
 
 ---
 
@@ -27,15 +35,15 @@ Outubro de 2026
 
 O Blue Garden é um repositório de ficheiros on-line, semelhante ao Google Drive, que guarda os ficheiros de forma distribuída e os organiza automaticamente por categoria com Inteligência Artificial. Corresponde ao Trabalho 3 do briefing e junta as unidades curriculares do 5.º semestre: Engenharia de Software, Sistemas Distribuídos, Inteligência Artificial, Segurança Informática e Projeto de Desenvolvimento de Software.
 
-A ideia partiu de uma necessidade do grupo. Acumulamos PDFs das aulas, trabalhos, faturas, fotografias e capturas de ecrã, tudo no mesmo sítio e com nomes que não dizem nada. Os serviços que existem guardam bem os ficheiros, mas a organização continua a ser feita à mão e a maioria das pessoas acaba por desistir.
+A ideia partiu de uma necessidade do grupo, que confirmámos em entrevistas a cinco estudantes: os ficheiros acumulam-se nas Transferências e noutros sítios, com nomes que não dizem nada, e quase ninguém os consegue manter arrumados. Os serviços que existem guardam bem os ficheiros, mas a organização continua a ser feita à mão.
 
-No Blue Garden, o utilizador carrega os ficheiros e encontra-os já arrumados em sete categorias: Académico, Faturas e finanças, Documentos pessoais, Fotografias, Capturas de ecrã, Código e Por rever. Cada decisão tem um grau de confiança e, quando é baixo, o ficheiro vai para «Por rever». O utilizador pode sempre corrigir a categoria.
+No Blue Garden, o utilizador carrega os ficheiros e encontra-os arrumados em sete categorias: Académico, Faturas e finanças, Documentos pessoais, Fotografias, Capturas de ecrã, Código e Por rever. Cada decisão tem um grau de confiança e, quando fica abaixo de 0,6, o ficheiro vai para «Por rever». O utilizador pode sempre corrigir a categoria, e as correções ficam guardadas para voltar a treinar o modelo.
 
-A IA usa regras simples para fotografias, capturas de ecrã e código, e um classificador (TF-IDF com Regressão Logística, comparada com Naive Bayes) para os documentos. As correções do utilizador ficam guardadas para melhorar o modelo. Toda a análise é feita nos nossos servidores, sem serviços externos.
+A IA corre num worker separado, em segundo plano. Usa regras simples para código, fotografias, capturas de ecrã e faturas, e um classificador TF-IDF (Naive Bayes ou Regressão Logística) para os restantes documentos. Toda a análise é feita nos nossos servidores, sem serviços externos. Num teste com 26 ficheiros novos, acertou em 20; em 5 dos erros o palpite estava certo, mas a confiança ficou abaixo do limiar.
 
-O sistema foi pensado para continuar a funcionar quando um componente falha. Um Nginx distribui os pedidos por três backends em Python (FastAPI), os metadados ficam num replica set de MongoDB com três nós e os ficheiros, cifrados, num cluster MinIO com quatro nós. Tudo corre em Docker.
+O sistema continua a funcionar quando um componente falha. Um Nginx com HTTPS distribui os pedidos por três backends em Python (FastAPI), os metadados ficam num replica set de MongoDB com três nós e os ficheiros, cifrados com Fernet, num cluster MinIO com quatro nós. Tudo corre em Docker Compose. Nos testes, parámos ao mesmo tempo um backend, um nó do MongoDB e um nó do MinIO, e o serviço continuou disponível.
 
-Nesta primeira fase definimos o problema, os requisitos, os diagramas UML, os mockups, a arquitetura, o modelo de faltas, a componente de IA e a segurança. As próximas fases são dedicadas à implementação, aos testes de falhas e à versão final.
+Nesta segunda fase implementámos o protótipo: contas, upload e download cifrados, pastas, pesquisa, reciclagem, categorização automática com correção, filtro por categoria e um script que demonstra os cenários de falha. Para a versão final falta sugerir nomes mais claros para os ficheiros, uma vista de administração e testar a IA com mais ficheiros reais.
 
 ---
 
@@ -51,7 +59,9 @@ Organizar à mão demora e acaba por ser abandonado. Além disso, um serviço de
 
 Todos no grupo já perdemos tempo à procura de um ficheiro que sabíamos que existia. O Google Drive, o Dropbox e o OneDrive guardam bem os ficheiros, mas nenhum arruma os documentos pelo conteúdo.
 
-**Público-alvo:** estudantes do ensino superior (18 a 27 anos) e adultos que precisam de manter faturas e documentos pessoais organizados, sem tempo para os arrumar à mão.
+Para confirmar que o problema não era só nosso, entrevistámos cinco estudantes. Três já tiveram de pedir ou descarregar outra vez um ficheiro que tinham, para três a maior confusão está na pasta Transferências e só um consegue manter os ficheiros organizados. As entrevistas também mostraram que a confiança é o maior risco: duas pessoas não querem que o conteúdo seja lido e duas só aceitam se a análise for feita localmente. Por isso, a análise sem serviços externos e a possibilidade de corrigir passaram a ser pontos centrais do projeto.
+
+**Público-alvo:** estudantes do ensino superior (18 a 27 anos), incluindo quem estuda e trabalha, e adultos que precisam de manter faturas e documentos pessoais organizados, sem tempo para os arrumar à mão.
 
 ### 1.3. Objetivos
 
@@ -66,33 +76,34 @@ Todos no grupo já perdemos tempo à procura de um ficheiro que sabíamos que ex
 
 ### 2.1. Metodologia utilizada
 
-Metodologia ágil, com sprints de uma semana, um quadro de tarefas (a fazer, em curso, feito) e uma reunião semanal curta. O código fica no GitHub e passa por pull request antes de entrar no projeto.
+Metodologia ágil, com sprints de uma semana, um quadro de tarefas (a fazer, em curso, feito) e uma reunião semanal curta. O trabalho está dividido em ciclos (Figura 16). O código fica no GitHub: o ramo `codigo` tem o protótipo e o ramo principal tem este arquivo.
 
 - **Fase 1** (entrega a 11/10/2026): requisitos, UML, mockups, arquitetura e modelo de faltas.
-- **Fase 2** (entrega a 15/11/2026): infraestrutura, funcionalidades base e primeira versão do classificador.
-- **Fase 3** (entrega a 20/12/2026): integração, testes de falhas e versão final.
+- **Fase 2** (entrega a 15/11/2026): infraestrutura, funcionalidades base, primeira versão da IA e testes de falhas.
+- **Fase 3** (entrega a 20/12/2026): versão final, mais testes, demonstração e documentação.
 
 ### 2.2. Ferramentas utilizadas
 
-- **GitHub:** controlo de versões e pull requests.
-- **Quadro de tarefas:** organização dos sprints.
-- **Chat de grupo:** comunicação do dia a dia.
-- **Docker Compose:** arranque de todos os serviços com um só comando.
+- **GitHub:** controlo de versões e acompanhamento do projeto.
+- **Docker Desktop e Docker Compose:** arranque de todos os serviços com um só comando.
+- **Git Bash:** comandos e scripts no Windows.
+- **FigCraft:** protótipos clicáveis do MVP, usados nos testes com utilizadores.
 - **Ferramentas de diagramas e mockups:** UML, arquitetura e interfaces.
+- **Quadro de tarefas e chat de grupo:** organização dos sprints e comunicação do dia a dia.
 
 ### 2.3. Tecnologias utilizadas
 
-- **Frontend:** HTML e JavaScript.
-- **Nginx:** HTTPS e distribuição dos pedidos.
-- **Backend:** Python com FastAPI (três instâncias).
-- **MongoDB:** replica set de três nós para os metadados e a fila da IA.
-- **MinIO:** quatro nós com erasure coding para os ficheiros.
-- **IA:** scikit-learn (TF-IDF, Regressão Logística e Naive Bayes).
+- **Frontend:** HTML, CSS e JavaScript, servido pelo Nginx.
+- **Nginx 1.27:** HTTPS (TLS 1.2 e 1.3) e distribuição dos pedidos pelos backends.
+- **Backend:** Python 3.12 com FastAPI (três instâncias sem estado).
+- **MongoDB 7:** replica set de três nós para contas, metadados e a fila da IA.
+- **MinIO:** quatro nós com erasure coding para os ficheiros. A imagem oficial deixou de estar disponível em setembro de 2026 e passámos a usar a da Chainguard.
+- **IA:** scikit-learn (TF-IDF, Naive Bayes e Regressão Logística), pypdf, python-docx e Tesseract (OCR em imagens).
 - **Segurança:** Fernet (AES), bcrypt e JWT.
 
 ### 2.4. Estrutura da equipa
 
-Três elementos: Francisco Lourinho, David Bação e Lucas Nicolau. As tarefas são distribuídas em cada sprint e o código de cada um é revisto por outro elemento.
+Três elementos: Francisco Lourinho, David Bação e Lucas Nicolau. As tarefas são distribuídas em cada sprint. Nesta fase, o Lucas ficou com o backend, o frontend, a infraestrutura em Docker e a demonstração de falhas; o David com a componente de IA (dados, treino e avaliação), a Engenharia de Software e o relatório; e o Francisco com a memória descritiva e o arquivo documental.
 
 ---
 
@@ -100,29 +111,30 @@ Três elementos: Francisco Lourinho, David Bação e Lucas Nicolau. As tarefas s
 
 ### 3.1. Descrição da solução desenvolvida
 
-O utilizador entra no site, carrega os ficheiros e encontra-os já arrumados por categoria (Figura 7).
+O utilizador entra no site, carrega os ficheiros e encontra-os arrumados por categoria, com o grau de confiança em cada ficheiro (Figura 17). Pode navegar por pastas, pesquisar pelo nome, filtrar por categoria e recuperar ficheiros da reciclagem (Figuras 18 a 21).
 
-Os pedidos passam pelo Nginx, que os distribui por três backends stateless. Os metadados ficam no MongoDB (três nós) e os ficheiros, cifrados, no MinIO (quatro nós). Assim, a falha de um componente não faz perder ficheiros (Figura 1).
+Os pedidos passam pelo Nginx, que os distribui por três backends sem estado. Os metadados ficam no MongoDB (três nós) e os ficheiros, cifrados no backend antes de serem guardados, no MinIO (quatro nós). Assim, a falha de um componente não faz perder ficheiros (Figuras 1 e 9).
 
-Cada ficheiro novo entra numa fila. O worker de IA aplica as regras ou o classificador e guarda a categoria com o grau de confiança. Abaixo de 0,6, o ficheiro vai para «Por rever». Como corre em segundo plano, o upload não fica à espera da IA.
+Cada ficheiro novo fica com o estado PENDENTE, que funciona como fila. O worker de IA aplica as regras ou o classificador e guarda a categoria com o grau de confiança (Figuras 10 e 11). Abaixo de 0,6, o ficheiro vai para «Por rever». Como corre em segundo plano, o upload não fica à espera da IA e, se o worker parar, os ficheiros esperam na fila até ele voltar.
 
 ### 3.2. Funcionalidades principais
 
-- Conta e login.
-- Upload e download de ficheiros.
-- Pastas: criar, renomear, apagar e mover ficheiros.
-- Reciclagem com recuperação.
+- Criar conta e iniciar sessão.
+- Upload e download de ficheiros, cifrados no armazenamento.
+- Criar pastas e mover ficheiros entre pastas (arrastando).
+- Reciclagem: apagar, recuperar e eliminar de vez.
 - Pesquisa por nome.
-- Categoria automática com grau de confiança.
-- Correção manual e filtro por categoria.
+- Categoria automática com grau de confiança e contagem por categoria.
+- Correção manual da categoria e filtro por categoria.
+- Perfil com foto (também cifrada) e modo escuro.
 
-Lista completa de requisitos nos Anexos A e B.
+O estado de cada requisito está no Anexo C.
 
 ### 3.3. Contributos relevantes
 
 - Organização pelo conteúdo, sem o utilizador criar regras ou pastas.
 - Armazenamento tolerante a faltas, com ficheiros cifrados e análise feita nos nossos servidores.
-- Uma IA honesta: quando não tem certeza, diz isso em vez de arrumar mal o ficheiro.
+- Uma IA honesta: quando não tem certeza, diz isso em vez de arrumar mal o ficheiro. No teste na aplicação, 5 dos 6 erros foram para «Por rever» com o palpite certo e só 1 ficou numa categoria errada (Figura 15).
 
 ---
 
@@ -131,35 +143,39 @@ Lista completa de requisitos nos Anexos A e B.
 ### 4.1. Lições aprendidas
 
 - Pensar no modelo de faltas cedo mudou o desenho, por exemplo ao pôr a fila da IA na base de dados.
-- Nem tudo precisa de machine learning: regras simples resolvem fotografias, capturas e código.
+- Nem tudo precisa de machine learning: regras simples resolvem fotografias, capturas, código e boa parte das faturas.
+- Na IA, ter mais dados fez muito mais diferença do que trocar de algoritmo (Figura 13).
 - A segurança tem custos: cifrar afeta o desempenho e obriga a cuidar bem da chave.
+- Depender de imagens de terceiros é um risco: a imagem do MinIO deixou de estar disponível a meio do projeto.
 
 ### 4.2. Limitações
 
 - O Nginx é um ponto único de falha.
 - Só consideramos falhas por paragem (crash).
 - Há uma só chave de cifra: se se perder, os ficheiros ficam ilegíveis.
-- O dataset é pequeno e feito pelo grupo.
-- Ficheiros sem texto nem metadados são difíceis de classificar.
+- O dataset é pequeno e foi escrito pelo grupo, por isso a validação cruzada dá resultados otimistas (Figura 14).
+- Os PDFs digitalizados não têm texto e não fazemos OCR neles: o modelo só vê o nome e a extensão.
+- As correções perdem-se se o ficheiro for eliminado de vez.
+- Ainda não é possível mudar o nome nem apagar pastas, e não há sugestão de nomes nem vista de administração.
 
 ### 4.3. Trabalho futuro
 
-Na próxima fase vamos implementar a infraestrutura, as funcionalidades base e o primeiro classificador. Mais à frente, queremos:
-
+- Sugerir um nome mais claro para cada ficheiro (RNF11).
+- Mudar o nome e apagar pastas.
+- Vista de administração com o estado dos nós.
+- OCR em PDFs digitalizados e mais ficheiros reais (anonimizados) no treino.
 - Dois Nginx com keepalived, para eliminar o ponto único de falha.
-- Várias categorias por ficheiro.
-- Deteção de ficheiros duplicados.
-- Partilha de ficheiros entre utilizadores.
+- Deteção de duplicados e partilha de ficheiros entre utilizadores.
 
 ---
 
 ## 5. Imagens
 
-Conceitos, modelação e mockups produzidos na primeira fase.
+Todas as imagens estão em `02_Imagens`. As figuras 1 a 8 são da primeira fase; as figuras 9 a 23 são desta fase.
 
 ### Figura 1. Arquitetura distribuída do Blue Garden
 
-*Todos os serviços correm em contentores Docker (Docker Compose). Linhas tracejadas = replicação entre nós.*
+*Ficheiro: `02_Imagens/img_01.jpg`. Todos os serviços correm em contentores Docker (Docker Compose). Linhas tracejadas = replicação entre nós.*
 
 - **Cliente web** (browser · HTML + JavaScript) → HTTPS → **Nginx** (load balancer, único ponto de falha assumido).
 - O Nginx distribui os pedidos por **Backend 1**, **Backend 2** e **Backend 3** (Python · FastAPI, stateless). Existe também um **Worker de IA** (scikit-learn · lê a fila na BD).
@@ -168,7 +184,7 @@ Conceitos, modelação e mockups produzidos na primeira fase.
 
 ### Figura 2. Diagrama de casos de uso
 
-*Linha contínua = associação ator–caso de uso · seta tracejada = «include».*
+*Ficheiro: `02_Imagens/img_02.jpg`. Linha contínua = associação ator–caso de uso · seta tracejada = «include».*
 
 Sistema Blue Garden:
 
@@ -178,7 +194,7 @@ Sistema Blue Garden:
 
 ### Figura 3. Diagrama de classes (estrutura dos dados no MongoDB)
 
-*Modelo de dados guardado no MongoDB (cada classe de domínio é uma coleção). Linha contínua = associação · seta tracejada = dependência.*
+*Ficheiro: `02_Imagens/img_03.jpg`. Modelo de dados guardado no MongoDB (cada classe de domínio é uma coleção). Linha contínua = associação · seta tracejada = dependência.*
 
 **Utilizador**
 - `_id: ObjectId`, `nome: String`, `email: String`, `password_hash: String`, `papel: String`, `criado_em: DateTime`
@@ -205,7 +221,7 @@ Sistema Blue Garden:
 
 ### Figura 4. Diagrama de sequência do carregamento de um ficheiro
 
-*Seta a cheio = pedido · seta tracejada = resposta. A categorização é assíncrona: o utilizador não espera pela IA.*
+*Ficheiro: `02_Imagens/img_04.jpg`. Seta a cheio = pedido · seta tracejada = resposta. A categorização é assíncrona: o utilizador não espera pela IA.*
 
 Participantes: Utilizador, Frontend (browser), Nginx, Backend (FastAPI), MinIO, MongoDB, Worker de IA.
 
@@ -226,7 +242,7 @@ Participantes: Utilizador, Frontend (browser), Nginx, Backend (FastAPI), MinIO, 
 
 ### Figura 5. Modelo de faltas
 
-*Pressupostos: só consideramos falhas por paragem (crash), sem nós maliciosos. Falhas simultâneas suportadas: 1 backend, 1 nó MongoDB e 1 nó MinIO na escrita (2 na leitura). Nenhum ficheiro já confirmado se perde.*
+*Ficheiro: `02_Imagens/img_05.jpg`. Pressupostos: só consideramos falhas por paragem (crash), sem nós maliciosos. Falhas simultâneas suportadas: 1 backend, 1 nó MongoDB e 1 nó MinIO na escrita (2 na leitura). Nenhum ficheiro já confirmado se perde.*
 
 | Falha (tipo) | Deteção | Recuperação |
 | --- | --- | --- |
@@ -239,9 +255,13 @@ Participantes: Utilizador, Frontend (browser), Nginx, Backend (FastAPI), MinIO, 
 
 ### Figura 6. Mockup da página de início de sessão
 
+*Ficheiro: `02_Imagens/img_06.jpg`.*
+
 Ecrã dividido em dois: à esquerda, fundo azul com o logótipo Blue Garden, uma grelha de blocos e o texto «Os teus ficheiros, guardados em vários nós e organizados automaticamente.»; à direita, o formulário «Iniciar sessão» com os campos Email (`nome@universidade.pt`) e Palavra-passe, o botão «Entrar» e as ligações «Criar conta» e «Esqueceste-te da palavra-passe?».
 
 ### Figura 7. Mockup da página principal, com as categorias atribuídas pela IA
+
+*Ficheiro: `02_Imagens/img_07.jpg`.*
 
 - **Barra superior:** logótipo Blue Garden, pesquisa («Pesquisar ficheiros, pastas ou categorias...»), botões «Nova pasta» e «Carregar».
 - **Menu lateral:** Os meus ficheiros, Recentes, Reciclagem.
@@ -250,6 +270,8 @@ Ecrã dividido em dois: à esquerda, fundo azul com o logótipo Blue Garden, uma
 - **Conteúdo** (Os meus ficheiros / 5.º semestre): pastas Projeto T3, Inteligência Artificial, Fotos, Apontamentos; ficheiros Relatorio_T3.pdf (Académico), arquitetura.png (Capturas de ecrã), main.py (Código), fatura_luz.pdf (Faturas), foto_grupo.jpg (Fotografias), contrato_casa.pdf (Documentos pessoais), documento_3.pdf (Por rever), scan_0012.pdf (IA a analisar...).
 
 ### Figura 8. Mockup da reciclagem
+
+*Ficheiro: `02_Imagens/img_08.jpg`.*
 
 Página «Reciclagem»: os ficheiros apagados ficam aqui durante [30] dias e podem ser recuperados. Botão «Esvaziar reciclagem».
 
@@ -262,13 +284,75 @@ Página «Reciclagem»: os ficheiros apagados ficam aqui durante [30] dias e pod
 
 Mensagem: «Os ficheiros recuperados voltam à pasta original e mantêm a categoria.»
 
+### Figura 9. Vista de implementação (contentores Docker)
+
+*Ficheiro: `02_Imagens/img_09.png`.* Os 13 contentores do Docker Compose: Nginx, três backends, três nós MongoDB, quatro nós MinIO, o worker de IA e o `mongo-init` (que só inicia o replica set e termina), todos na mesma rede interna. Só o Nginx tem portas abertas para fora (a consola do MinIO, na porta 9001, fica aberta só para a demonstração).
+
+### Figura 10. Como a IA categoriza um ficheiro
+
+*Ficheiro: `02_Imagens/img_10.png`.* Extração do texto e dos metadados, regras, modelo TF-IDF, combinação das duas decisões e limiar de 0,6. As correções do utilizador servem para treinar o modelo outra vez.
+
+### Figura 11. Estados de um ficheiro
+
+*Ficheiro: `02_Imagens/img_11.png`.* A fila da IA (PENDENTE, EM_ANALISE, CATEGORIZADO) e a reciclagem. Se o worker cair a meio de uma análise, o ficheiro volta à fila ao fim de 5 minutos.
+
+### Figura 12. Segurança
+
+*Ficheiro: `02_Imagens/img_12.png`.* HTTPS no Nginx, passwords com bcrypt, sessões com JWT, autorização por utilizador e ficheiros cifrados com Fernet antes de chegarem ao MinIO.
+
+### Figura 13. Resultados da IA em ficheiros novos
+
+*Ficheiro: `02_Imagens/img_13.png`.* Acertos em dois conjuntos de teste que o modelo nunca viu, para três versões dos dados de treino e para os dois algoritmos.
+
+### Figura 14. Matriz de confusão (validação cruzada)
+
+*Ficheiro: `02_Imagens/img_14.png`.* Naive Bayes com as 320 sementes, validação cruzada estratificada em 5 partes. É um resultado otimista, porque as sementes são parecidas entre si.
+
+### Figura 15. Teste na aplicação
+
+*Ficheiro: `02_Imagens/img_15.png`.* 26 ficheiros novos carregados na aplicação: 20 certos, 5 em «Por rever» com o palpite certo e 1 errado.
+
+### Figura 16. Planeamento por ciclos
+
+*Ficheiro: `02_Imagens/img_16.png`.* Os quatro ciclos do projeto e as três entregas.
+
+### Figura 17. Página principal do protótipo
+
+*Ficheiro: `02_Imagens/img_17.png`.* Pastas, ficheiros com a categoria e a confiança, e a contagem por categoria na barra lateral. Os ficheiros são de teste.
+
+### Figura 18. Navegação por pastas
+
+*Ficheiro: `02_Imagens/img_18.png`.* Conteúdo da pasta «Universidade», com o caminho no topo.
+
+### Figura 19. Filtro «Por rever»
+
+*Ficheiro: `02_Imagens/img_19.png`.* Ficheiros em que a IA não teve confiança suficiente, com a percentagem do palpite.
+
+### Figura 20. Pesquisa por nome
+
+*Ficheiro: `02_Imagens/img_20.png`.* A pesquisa procura em todas as pastas e mostra onde está cada ficheiro.
+
+### Figura 21. Reciclagem
+
+*Ficheiro: `02_Imagens/img_21.png`.* Ficheiros apagados, com a pasta original e a opção de recuperar.
+
+### Figura 22. Modo escuro
+
+*Ficheiro: `02_Imagens/img_22.png`.* A preferência fica guardada na conta.
+
+### Figura 23. Criar conta
+
+*Ficheiro: `02_Imagens/img_23.png`.* Página de entrada, no separador «Criar conta».
+
 ### Ficheiros técnicos
 
-- **Arquitetura do sistema:** Figura 1.
+Em `04_Documentacao_Tecnica`:
+
+- **Arquitetura do sistema:** Figuras 1 e 9 (versões vetoriais em `diagramas/`).
 - **Diagramas UML:** Figuras 2, 3 e 4.
-- **Estrutura da base de dados:** Figura 3 (cada classe é uma coleção no MongoDB).
-- **Capturas da aplicação:** mockups nas Figuras 6 a 8; capturas reais nas próximas fases.
-- **Repositório GitHub:** https://github.com/mimofixe/BlueGarden
+- **Estrutura da base de dados:** `estrutura_base_dados.md` e Figura 3.
+- **Capturas da aplicação:** Figuras 17 a 23.
+- **Repositório Git:** `repositorio_git.md` e https://github.com/mimofixe/BlueGarden
 
 ---
 
@@ -304,3 +388,19 @@ Mensagem: «Os ficheiros recuperados voltam à pasta original e mantêm a catego
 | RNF09 Fiabilidade da IA | Cada decisão tem um grau de confiança. Abaixo do limiar, o ficheiro vai para «Por rever». |
 | RNF10 Manutenibilidade | Código versionado no GitHub. O sistema arranca com um único comando (Docker Compose). |
 | RNF11 Nomes dos ficheiros | O sistema sugere um nome mais claro para cada ficheiro, com base no conteúdo. |
+
+### Anexo C. Estado dos requisitos na 2.ª entrega
+
+| Requisito | Estado |
+| --- | --- |
+| RF01 Conta e login | Implementado |
+| RF02 Upload e download | Implementado (ficheiros cifrados no MinIO) |
+| RF03 Pastas | Parcial: dá para criar pastas; mudar o nome e apagar pastas ainda não |
+| RF04 Mover entre pastas | Implementado (arrastar o ficheiro para a pasta) |
+| RF05 Reciclagem | Implementado (apagar, recuperar e eliminar de vez) |
+| RF06 Pesquisa por nome | Implementado |
+| RF07 Categorização automática | Implementado (worker de IA) |
+| RF08 Categoria e confiança | Implementado |
+| RF09 Correção da categoria | Implementado |
+| RF10 Filtro por categoria | Implementado (barra lateral) |
+| RNF11 Nomes dos ficheiros | Não implementado (trabalho futuro) |

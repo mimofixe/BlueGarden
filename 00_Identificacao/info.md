@@ -1,30 +1,29 @@
 # Blue Garden
 
-**Repositório de Ficheiros Distribuído On-Line** · 1.ª entrega · Grupo 3
+**Repositório de Ficheiros Distribuído On-Line** · Grupo 3 · 2.ª entrega (novembro de 2026)
 
-## Equipa
+## Identificação dos estudantes
 
-| Nome | Número |
-| --- | --- |
-| Francisco Lourinho | 202301001 |
-| David Bação | 20230331 |
-| Lucas Nicolau | 20241526 |
+| Nome completo | N.º de estudante | Curso | Ano curricular |
+| --- | --- | --- | --- |
+| Francisco Miguel Barbosa Lourinho | 202301001 | Licenciatura em Engenharia Informática | 3.º ano |
+| David Miguel Martins Cebolinho de Almeida Bação | 20230331 | Licenciatura em Engenharia Informática | 3.º ano |
+| Lucas Nicolau | 20241526 | Licenciatura em Engenharia Informática | 3.º ano |
 
-- **Unidade curricular:** Projeto de Desenvolvimento de Software
-- **Curso:** Licenciatura em Engenharia Informática, 3.º ano, 5.º semestre, 2026/2027
-- **Instituição:** IADE - Universidade Europeia
-- **Docente:** Rui Pascoal
-- **Data:** Outubro de 2026
+## Metadados do projeto
 
-## Mini explicação do projeto
+1. **Título do projeto:** Blue Garden — Repositório de Ficheiros Distribuído On-Line
+2. **Ano letivo:** 2026/2027
+3. **Semestre:** 5.º semestre
+4. **Curso envolvido:** Licenciatura em Engenharia Informática (L-EI), IADE – Universidade Europeia
+5. **Unidades curriculares:** Projeto de Desenvolvimento de Software; Engenharia de Software; Sistemas Distribuídos; Inteligência Artificial; Segurança Informática
+6. **Docentes:** Rui Pascoal e Miguel Boavida (Projeto de Desenvolvimento de Software); Rui Ramos (Engenharia de Software); Pedro Rosa (Sistemas Distribuídos); Samuel Gomes (Inteligência Artificial); Sérgio Nunes e Pedro Brandão (Segurança Informática)
+7. **Estudantes participantes:** Francisco Lourinho, David Bação e Lucas Nicolau (Grupo 3)
+8. **Palavras-chave:** sistemas distribuídos; tolerância a faltas; armazenamento de ficheiros; replicação; erasure coding; aprendizagem automática; classificação de documentos; TF-IDF; Naive Bayes; cifra de ficheiros; Docker
+9. **Tecnologias utilizadas:** HTML, CSS e JavaScript; Nginx; Python 3.12 com FastAPI; MongoDB 7 (replica set); MinIO (erasure coding); scikit-learn; pypdf, python-docx e Tesseract OCR; Fernet (cryptography), bcrypt e JWT; Docker e Docker Compose; Git e GitHub
+10. **Resumo curto:**
 
-O Blue Garden é um repositório de ficheiros on-line, semelhante ao Google Drive, que guarda os ficheiros de forma distribuída e os organiza automaticamente por categoria com Inteligência Artificial.
-
-O utilizador carrega os ficheiros e encontra-os já arrumados em sete categorias: Académico, Faturas e finanças, Documentos pessoais, Fotografias, Capturas de ecrã, Código e Por rever. Cada decisão da IA tem um grau de confiança; quando é baixo (abaixo de 0,6), o ficheiro vai para «Por rever», e o utilizador pode sempre corrigir a categoria.
-
-A IA usa regras simples para fotografias, capturas de ecrã e código, e um classificador (TF-IDF com Regressão Logística, comparada com Naive Bayes) para os documentos. Toda a análise é feita nos servidores do projeto, sem serviços externos.
-
-O sistema continua a funcionar quando um componente falha: um Nginx distribui os pedidos por três backends em Python (FastAPI), os metadados ficam num replica set de MongoDB com três nós e os ficheiros, cifrados, num cluster MinIO com quatro nós. Tudo corre em Docker.
+O Blue Garden é um repositório de ficheiros on-line, parecido com o Google Drive, que guarda os ficheiros de forma distribuída e os arruma sozinho por categoria. Cada ficheiro carregado é analisado por um worker de Inteligência Artificial, que junta regras simples (código, fotografias, capturas de ecrã e faturas) com um modelo de aprendizagem automática (TF-IDF com Naive Bayes ou Regressão Logística). Cada decisão tem um grau de confiança e, abaixo de 0,6, o ficheiro vai para «Por rever»; o utilizador pode sempre corrigir. O sistema corre em Docker: um Nginx com HTTPS distribui os pedidos por três backends FastAPI, os metadados ficam num replica set de MongoDB com três nós e os ficheiros, cifrados, num cluster MinIO com quatro nós. O serviço continua disponível com um backend, um nó da base de dados e um nó de armazenamento em baixo.
 
 ## Links
 
