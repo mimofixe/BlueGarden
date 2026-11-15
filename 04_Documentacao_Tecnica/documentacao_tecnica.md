@@ -22,7 +22,7 @@ https://github.com/mimofixe/BlueGarden
 - Ramo `codigo`: o protótipo (backend, frontend, IA, Docker Compose e script de testes de falha).
 - Ramo `main`: este arquivo.
 
-O relatório e a memória descritiva da 1.ª entrega estão em `entregas_anteriores/`.
+O relatório e a memória descritiva da 1.ª entrega estão em `1ª Entrega/`. O relatório e a apresentação da 2.ª entrega estão em `2ª Entrega/`.
 
 ## Estrutura da base de dados
 
